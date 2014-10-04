@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////////////////////////////////
-// C++ code generated with wxFormBuilder (version Aug 17 2007)
+// C++ code generated with wxFormBuilder (version Sep  6 2007)
 // http://www.wxformbuilder.org/
 //
 // PLEASE DO "NOT" EDIT THIS FILE!
@@ -8,11 +8,14 @@
 #ifndef __noname__
 #define __noname__
 
-#include <wx/wx.h>
-
+#include <wx/stattext.h>
+#include <wx/listbox.h>
+#include <wx/sizer.h>
 #include <wx/button.h>
+#include <wx/textctrl.h>
 #include <wx/spinctrl.h>
 #include <wx/choice.h>
+#include <wx/panel.h>
 
 ///////////////////////////////////////////////////////////////////////////
 

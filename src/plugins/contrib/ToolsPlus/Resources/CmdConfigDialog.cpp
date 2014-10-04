@@ -1,21 +1,9 @@
 ///////////////////////////////////////////////////////////////////////////
-// C++ code generated with wxFormBuilder (version Aug 17 2007)
+// C++ code generated with wxFormBuilder (version Sep  6 2007)
 // http://www.wxformbuilder.org/
 //
 // PLEASE DO "NOT" EDIT THIS FILE!
 ///////////////////////////////////////////////////////////////////////////
-
-#ifdef WX_PRECOMP
-
-#include "wx/wxprec.h"
-
-#ifdef __BORLANDC__
-#pragma hdrstop
-#endif //__BORLANDC__
-
-#else
-#include <wx/wx.h>
-#endif //WX_PRECOMP
 
 #include "noname.h"
 
