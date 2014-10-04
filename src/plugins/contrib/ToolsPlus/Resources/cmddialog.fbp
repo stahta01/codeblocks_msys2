@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <wxFormBuilder_Project>
-    <FileVersion major="1" minor="5" />
+    <FileVersion major="1" minor="7" />
     <object class="Project" expanded="1">
         <property name="bitmaps"></property>
+        <property name="class_decoration"></property>
         <property name="code_generation">C++|XRC</property>
         <property name="encoding">UTF-8</property>
+        <property name="event_generation">connect</property>
         <property name="file"></property>
         <property name="first_id">1000</property>
+        <property name="help_provider">none</property>
         <property name="icons"></property>
         <property name="internationalize">0</property>
         <property name="name">CMDCONFIGDLG</property>
+        <property name="namespace"></property>
         <property name="path">.</property>
         <property name="precompiled_header">wx/wxprec.h</property>
         <property name="relative_path">1</property>
@@ -17,6 +21,7 @@
         <property name="use_microsoft_bom">0</property>
         <object class="Panel" expanded="1">
             <property name="bg"></property>
+            <property name="context_help"></property>
             <property name="enabled">1</property>
             <property name="fg"></property>
             <property name="font"></property>
@@ -31,11 +36,35 @@
             <property name="tooltip"></property>
             <property name="window_extra_style"></property>
             <property name="window_style">wxTAB_TRAVERSAL</property>
+            <event name="OnChar"></event>
+            <event name="OnEnterWindow"></event>
+            <event name="OnEraseBackground"></event>
+            <event name="OnInitDialog"></event>
+            <event name="OnKeyDown"></event>
+            <event name="OnKeyUp"></event>
+            <event name="OnKillFocus"></event>
+            <event name="OnLeaveWindow"></event>
+            <event name="OnLeftDClick"></event>
+            <event name="OnLeftDown"></event>
+            <event name="OnLeftUp"></event>
+            <event name="OnMiddleDClick"></event>
+            <event name="OnMiddleDown"></event>
+            <event name="OnMiddleUp"></event>
+            <event name="OnMotion"></event>
+            <event name="OnMouseEvents"></event>
+            <event name="OnMouseWheel"></event>
+            <event name="OnPaint"></event>
+            <event name="OnRightDClick"></event>
+            <event name="OnRightDown"></event>
+            <event name="OnRightUp"></event>
+            <event name="OnSetFocus"></event>
             <event name="OnSize"></event>
+            <event name="OnUpdateUI"></event>
             <object class="wxBoxSizer" expanded="1">
                 <property name="minimum_size"></property>
                 <property name="name">bSizer20</property>
                 <property name="orient">wxVERTICAL</property>
+                <property name="permission">none</property>
                 <object class="sizeritem" expanded="1">
                     <property name="border">5</property>
                     <property name="flag">wxEXPAND</property>
@@ -44,6 +73,7 @@
                         <property name="minimum_size"></property>
                         <property name="name">bSizer40</property>
                         <property name="orient">wxHORIZONTAL</property>
+                        <property name="permission">none</property>
                         <object class="sizeritem" expanded="1">
                             <property name="border">5</property>
                             <property name="flag">wxEXPAND</property>
@@ -52,12 +82,14 @@
                                 <property name="minimum_size"></property>
                                 <property name="name">bSizer43</property>
                                 <property name="orient">wxVERTICAL</property>
+                                <property name="permission">none</property>
                                 <object class="sizeritem" expanded="1">
                                     <property name="border">5</property>
                                     <property name="flag">wxALL</property>
                                     <property name="proportion">0</property>
                                     <object class="wxStaticText" expanded="1">
                                         <property name="bg"></property>
+                                        <property name="context_help"></property>
                                         <property name="enabled">1</property>
                                         <property name="fg"></property>
                                         <property name="font"></property>
@@ -75,6 +107,8 @@
                                         <property name="tooltip"></property>
                                         <property name="window_extra_style"></property>
                                         <property name="window_style"></property>
+                                        <property name="wrap">-1</property>
+                                        <event name="OnUpdateUI"></event>
                                     </object>
                                 </object>
                                 <object class="sizeritem" expanded="1">
@@ -84,6 +118,7 @@
                                     <object class="wxListBox" expanded="1">
                                         <property name="bg"></property>
                                         <property name="choices"></property>
+                                        <property name="context_help"></property>
                                         <property name="enabled">1</property>
                                         <property name="fg"></property>
                                         <property name="font"></property>
@@ -102,6 +137,7 @@
                                         <property name="window_style"></property>
                                         <event name="OnListBox"></event>
                                         <event name="OnListBoxDClick"></event>
+                                        <event name="OnUpdateUI"></event>
                                     </object>
                                 </object>
                             </object>
@@ -114,12 +150,14 @@
                                 <property name="minimum_size"></property>
                                 <property name="name">bSizer11</property>
                                 <property name="orient">wxVERTICAL</property>
+                                <property name="permission">none</property>
                                 <object class="sizeritem" expanded="1">
                                     <property name="border">5</property>
                                     <property name="flag">wxLEFT|wxRIGHT</property>
                                     <property name="proportion">0</property>
                                     <object class="wxButton" expanded="1">
                                         <property name="bg"></property>
+                                        <property name="context_help"></property>
                                         <property name="enabled">1</property>
                                         <property name="fg"></property>
                                         <property name="font"></property>
@@ -138,6 +176,7 @@
                                         <property name="window_extra_style"></property>
                                         <property name="window_style"></property>
                                         <event name="OnButtonClick"></event>
+                                        <event name="OnUpdateUI"></event>
                                     </object>
                                 </object>
                                 <object class="sizeritem" expanded="1">
@@ -146,6 +185,7 @@
                                     <property name="proportion">0</property>
                                     <object class="wxButton" expanded="1">
                                         <property name="bg"></property>
+                                        <property name="context_help"></property>
                                         <property name="enabled">1</property>
                                         <property name="fg"></property>
                                         <property name="font"></property>
@@ -164,6 +204,7 @@
                                         <property name="window_extra_style"></property>
                                         <property name="window_style"></property>
                                         <event name="OnButtonClick"></event>
+                                        <event name="OnUpdateUI"></event>
                                     </object>
                                 </object>
                                 <object class="sizeritem" expanded="1">
@@ -172,6 +213,7 @@
                                     <property name="proportion">0</property>
                                     <object class="wxButton" expanded="1">
                                         <property name="bg"></property>
+                                        <property name="context_help"></property>
                                         <property name="enabled">1</property>
                                         <property name="fg"></property>
                                         <property name="font"></property>
@@ -190,14 +232,18 @@
                                         <property name="window_extra_style"></property>
                                         <property name="window_style"></property>
                                         <event name="OnButtonClick"></event>
+                                        <event name="OnUpdateUI"></event>
                                     </object>
                                 </object>
-                                <object class="spacer" expanded="1">
+                                <object class="sizeritem" expanded="1">
                                     <property name="border">5</property>
                                     <property name="flag">wxALL</property>
-                                    <property name="height">10</property>
                                     <property name="proportion">1</property>
-                                    <property name="width">0</property>
+                                    <object class="spacer" expanded="1">
+                                        <property name="height">10</property>
+                                        <property name="permission">protected</property>
+                                        <property name="width">0</property>
+                                    </object>
                                 </object>
                                 <object class="sizeritem" expanded="1">
                                     <property name="border">5</property>
@@ -205,6 +251,7 @@
                                     <property name="proportion">0</property>
                                     <object class="wxButton" expanded="1">
                                         <property name="bg"></property>
+                                        <property name="context_help"></property>
                                         <property name="enabled">1</property>
                                         <property name="fg"></property>
                                         <property name="font"></property>
@@ -223,6 +270,7 @@
                                         <property name="window_extra_style"></property>
                                         <property name="window_style"></property>
                                         <event name="OnButtonClick"></event>
+                                        <event name="OnUpdateUI"></event>
                                     </object>
                                 </object>
                                 <object class="sizeritem" expanded="1">
@@ -231,6 +279,7 @@
                                     <property name="proportion">0</property>
                                     <object class="wxButton" expanded="1">
                                         <property name="bg"></property>
+                                        <property name="context_help"></property>
                                         <property name="enabled">1</property>
                                         <property name="fg"></property>
                                         <property name="font"></property>
@@ -249,6 +298,7 @@
                                         <property name="window_extra_style"></property>
                                         <property name="window_style"></property>
                                         <event name="OnButtonClick"></event>
+                                        <event name="OnUpdateUI"></event>
                                     </object>
                                 </object>
                             </object>
@@ -263,12 +313,14 @@
                         <property name="minimum_size"></property>
                         <property name="name">bSizer21</property>
                         <property name="orient">wxHORIZONTAL</property>
+                        <property name="permission">none</property>
                         <object class="sizeritem" expanded="1">
                             <property name="border">5</property>
                             <property name="flag">wxALIGN_CENTER|wxALL</property>
                             <property name="proportion">0</property>
                             <object class="wxStaticText" expanded="1">
                                 <property name="bg"></property>
+                                <property name="context_help"></property>
                                 <property name="enabled">1</property>
                                 <property name="fg"></property>
                                 <property name="font"></property>
@@ -286,6 +338,8 @@
                                 <property name="tooltip"></property>
                                 <property name="window_extra_style"></property>
                                 <property name="window_style"></property>
+                                <property name="wrap">-1</property>
+                                <event name="OnUpdateUI"></event>
                             </object>
                         </object>
                         <object class="sizeritem" expanded="1">
@@ -294,6 +348,7 @@
                             <property name="proportion">2</property>
                             <object class="wxTextCtrl" expanded="1">
                                 <property name="bg"></property>
+                                <property name="context_help"></property>
                                 <property name="enabled">1</property>
                                 <property name="fg"></property>
                                 <property name="font"></property>
@@ -316,6 +371,7 @@
                                 <event name="OnTextEnter"></event>
                                 <event name="OnTextMaxLen"></event>
                                 <event name="OnTextURL"></event>
+                                <event name="OnUpdateUI"></event>
                             </object>
                         </object>
                     </object>
@@ -328,12 +384,14 @@
                         <property name="minimum_size"></property>
                         <property name="name">bSizer211</property>
                         <property name="orient">wxHORIZONTAL</property>
+                        <property name="permission">none</property>
                         <object class="sizeritem" expanded="1">
                             <property name="border">5</property>
                             <property name="flag">wxALIGN_CENTER|wxALL</property>
                             <property name="proportion">0</property>
                             <object class="wxStaticText" expanded="1">
                                 <property name="bg"></property>
+                                <property name="context_help"></property>
                                 <property name="enabled">1</property>
                                 <property name="fg"></property>
                                 <property name="font"></property>
@@ -351,6 +409,8 @@
                                 <property name="tooltip"></property>
                                 <property name="window_extra_style"></property>
                                 <property name="window_style"></property>
+                                <property name="wrap">-1</property>
+                                <event name="OnUpdateUI"></event>
                             </object>
                         </object>
                     </object>
@@ -361,6 +421,7 @@
                     <property name="proportion">0</property>
                     <object class="wxTextCtrl" expanded="1">
                         <property name="bg"></property>
+                        <property name="context_help"></property>
                         <property name="enabled">1</property>
                         <property name="fg"></property>
                         <property name="font"></property>
@@ -383,6 +444,7 @@
                         <event name="OnTextEnter"></event>
                         <event name="OnTextMaxLen"></event>
                         <event name="OnTextURL"></event>
+                        <event name="OnUpdateUI"></event>
                     </object>
                 </object>
                 <object class="sizeritem" expanded="1">
@@ -393,12 +455,14 @@
                         <property name="minimum_size"></property>
                         <property name="name">bSizer214</property>
                         <property name="orient">wxHORIZONTAL</property>
+                        <property name="permission">none</property>
                         <object class="sizeritem" expanded="1">
                             <property name="border">5</property>
                             <property name="flag">wxALIGN_CENTER|wxALL</property>
                             <property name="proportion">0</property>
                             <object class="wxStaticText" expanded="1">
                                 <property name="bg"></property>
+                                <property name="context_help"></property>
                                 <property name="enabled">1</property>
                                 <property name="fg"></property>
                                 <property name="font"></property>
@@ -416,6 +480,8 @@
                                 <property name="tooltip"></property>
                                 <property name="window_extra_style"></property>
                                 <property name="window_style"></property>
+                                <property name="wrap">-1</property>
+                                <event name="OnUpdateUI"></event>
                             </object>
                         </object>
                         <object class="sizeritem" expanded="1">
@@ -424,6 +490,7 @@
                             <property name="proportion">1</property>
                             <object class="wxTextCtrl" expanded="1">
                                 <property name="bg"></property>
+                                <property name="context_help"></property>
                                 <property name="enabled">1</property>
                                 <property name="fg"></property>
                                 <property name="font"></property>
@@ -446,6 +513,7 @@
                                 <event name="OnTextEnter"></event>
                                 <event name="OnTextMaxLen"></event>
                                 <event name="OnTextURL"></event>
+                                <event name="OnUpdateUI"></event>
                             </object>
                         </object>
                         <object class="sizeritem" expanded="1">
@@ -454,6 +522,7 @@
                             <property name="proportion">0</property>
                             <object class="wxStaticText" expanded="1">
                                 <property name="bg"></property>
+                                <property name="context_help"></property>
                                 <property name="enabled">1</property>
                                 <property name="fg"></property>
                                 <property name="font"></property>
@@ -471,6 +540,8 @@
                                 <property name="tooltip"></property>
                                 <property name="window_extra_style"></property>
                                 <property name="window_style"></property>
+                                <property name="wrap">-1</property>
+                                <event name="OnUpdateUI"></event>
                             </object>
                         </object>
                         <object class="sizeritem" expanded="1">
@@ -479,6 +550,7 @@
                             <property name="proportion">1</property>
                             <object class="wxTextCtrl" expanded="1">
                                 <property name="bg"></property>
+                                <property name="context_help"></property>
                                 <property name="enabled">1</property>
                                 <property name="fg"></property>
                                 <property name="font"></property>
@@ -501,6 +573,7 @@
                                 <event name="OnTextEnter"></event>
                                 <event name="OnTextMaxLen"></event>
                                 <event name="OnTextURL"></event>
+                                <event name="OnUpdateUI"></event>
                             </object>
                         </object>
                     </object>
@@ -513,12 +586,14 @@
                         <property name="minimum_size"></property>
                         <property name="name">bSizer212</property>
                         <property name="orient">wxHORIZONTAL</property>
+                        <property name="permission">none</property>
                         <object class="sizeritem" expanded="1">
                             <property name="border">5</property>
                             <property name="flag">wxALIGN_CENTER|wxALL</property>
                             <property name="proportion">0</property>
                             <object class="wxStaticText" expanded="1">
                                 <property name="bg"></property>
+                                <property name="context_help"></property>
                                 <property name="enabled">1</property>
                                 <property name="fg"></property>
                                 <property name="font"></property>
@@ -536,6 +611,8 @@
                                 <property name="tooltip"></property>
                                 <property name="window_extra_style"></property>
                                 <property name="window_style"></property>
+                                <property name="wrap">-1</property>
+                                <event name="OnUpdateUI"></event>
                             </object>
                         </object>
                         <object class="sizeritem" expanded="1">
@@ -544,6 +621,7 @@
                             <property name="proportion">1</property>
                             <object class="wxTextCtrl" expanded="1">
                                 <property name="bg"></property>
+                                <property name="context_help"></property>
                                 <property name="enabled">1</property>
                                 <property name="fg"></property>
                                 <property name="font"></property>
@@ -566,6 +644,7 @@
                                 <event name="OnTextEnter"></event>
                                 <event name="OnTextMaxLen"></event>
                                 <event name="OnTextURL"></event>
+                                <event name="OnUpdateUI"></event>
                             </object>
                         </object>
                         <object class="sizeritem" expanded="1">
@@ -574,6 +653,7 @@
                             <property name="proportion">0</property>
                             <object class="wxStaticText" expanded="1">
                                 <property name="bg"></property>
+                                <property name="context_help"></property>
                                 <property name="enabled">1</property>
                                 <property name="fg"></property>
                                 <property name="font"></property>
@@ -591,6 +671,8 @@
                                 <property name="tooltip"></property>
                                 <property name="window_extra_style"></property>
                                 <property name="window_style"></property>
+                                <property name="wrap">-1</property>
+                                <event name="OnUpdateUI"></event>
                             </object>
                         </object>
                         <object class="sizeritem" expanded="1">
@@ -599,6 +681,7 @@
                             <property name="proportion">0</property>
                             <object class="wxSpinCtrl" expanded="1">
                                 <property name="bg"></property>
+                                <property name="context_help"></property>
                                 <property name="enabled">1</property>
                                 <property name="fg"></property>
                                 <property name="font"></property>
@@ -619,6 +702,9 @@
                                 <property name="value"></property>
                                 <property name="window_extra_style"></property>
                                 <property name="window_style"></property>
+                                <event name="OnSpinCtrl"></event>
+                                <event name="OnSpinCtrlText"></event>
+                                <event name="OnUpdateUI"></event>
                             </object>
                         </object>
                     </object>
@@ -631,12 +717,14 @@
                         <property name="minimum_size"></property>
                         <property name="name">bSizer2121</property>
                         <property name="orient">wxHORIZONTAL</property>
+                        <property name="permission">none</property>
                         <object class="sizeritem" expanded="1">
                             <property name="border">5</property>
                             <property name="flag">wxALIGN_CENTER|wxALL</property>
                             <property name="proportion">0</property>
                             <object class="wxStaticText" expanded="1">
                                 <property name="bg"></property>
+                                <property name="context_help"></property>
                                 <property name="enabled">1</property>
                                 <property name="fg"></property>
                                 <property name="font"></property>
@@ -654,6 +742,8 @@
                                 <property name="tooltip"></property>
                                 <property name="window_extra_style"></property>
                                 <property name="window_style"></property>
+                                <property name="wrap">-1</property>
+                                <event name="OnUpdateUI"></event>
                             </object>
                         </object>
                         <object class="sizeritem" expanded="1">
@@ -662,6 +752,7 @@
                             <property name="proportion">1</property>
                             <object class="wxTextCtrl" expanded="1">
                                 <property name="bg"></property>
+                                <property name="context_help"></property>
                                 <property name="enabled">1</property>
                                 <property name="fg"></property>
                                 <property name="font"></property>
@@ -684,6 +775,7 @@
                                 <event name="OnTextEnter"></event>
                                 <event name="OnTextMaxLen"></event>
                                 <event name="OnTextURL"></event>
+                                <event name="OnUpdateUI"></event>
                             </object>
                         </object>
                         <object class="sizeritem" expanded="1">
@@ -692,6 +784,7 @@
                             <property name="proportion">0</property>
                             <object class="wxStaticText" expanded="1">
                                 <property name="bg"></property>
+                                <property name="context_help"></property>
                                 <property name="enabled">1</property>
                                 <property name="fg"></property>
                                 <property name="font"></property>
@@ -709,6 +802,8 @@
                                 <property name="tooltip"></property>
                                 <property name="window_extra_style"></property>
                                 <property name="window_style"></property>
+                                <property name="wrap">-1</property>
+                                <event name="OnUpdateUI"></event>
                             </object>
                         </object>
                         <object class="sizeritem" expanded="1">
@@ -717,6 +812,7 @@
                             <property name="proportion">0</property>
                             <object class="wxSpinCtrl" expanded="1">
                                 <property name="bg"></property>
+                                <property name="context_help"></property>
                                 <property name="enabled">1</property>
                                 <property name="fg"></property>
                                 <property name="font"></property>
@@ -737,6 +833,9 @@
                                 <property name="value"></property>
                                 <property name="window_extra_style"></property>
                                 <property name="window_style"></property>
+                                <event name="OnSpinCtrl"></event>
+                                <event name="OnSpinCtrlText"></event>
+                                <event name="OnUpdateUI"></event>
                             </object>
                         </object>
                     </object>
@@ -749,12 +848,14 @@
                         <property name="minimum_size"></property>
                         <property name="name">bSizer213</property>
                         <property name="orient">wxHORIZONTAL</property>
+                        <property name="permission">none</property>
                         <object class="sizeritem" expanded="1">
                             <property name="border">5</property>
                             <property name="flag">wxALIGN_CENTER|wxALL</property>
                             <property name="proportion">0</property>
                             <object class="wxStaticText" expanded="1">
                                 <property name="bg"></property>
+                                <property name="context_help"></property>
                                 <property name="enabled">1</property>
                                 <property name="fg"></property>
                                 <property name="font"></property>
@@ -772,6 +873,8 @@
                                 <property name="tooltip"></property>
                                 <property name="window_extra_style"></property>
                                 <property name="window_style"></property>
+                                <property name="wrap">-1</property>
+                                <event name="OnUpdateUI"></event>
                             </object>
                         </object>
                         <object class="sizeritem" expanded="1">
@@ -781,6 +884,7 @@
                             <object class="wxChoice" expanded="1">
                                 <property name="bg"></property>
                                 <property name="choices">&apos;Windowed Console Notepage&apos; &apos;Code::Blocks Console&apos; &apos;Standard Shell&apos;</property>
+                                <property name="context_help"></property>
                                 <property name="enabled">1</property>
                                 <property name="fg"></property>
                                 <property name="font"></property>
@@ -797,6 +901,7 @@
                                 <property name="window_extra_style"></property>
                                 <property name="window_style"></property>
                                 <event name="OnChoice"></event>
+                                <event name="OnUpdateUI"></event>
                             </object>
                         </object>
                         <object class="sizeritem" expanded="1">
@@ -805,6 +910,7 @@
                             <property name="proportion">0</property>
                             <object class="wxStaticText" expanded="1">
                                 <property name="bg"></property>
+                                <property name="context_help"></property>
                                 <property name="enabled">1</property>
                                 <property name="fg"></property>
                                 <property name="font"></property>
@@ -822,6 +928,8 @@
                                 <property name="tooltip"></property>
                                 <property name="window_extra_style"></property>
                                 <property name="window_style"></property>
+                                <property name="wrap">-1</property>
+                                <event name="OnUpdateUI"></event>
                             </object>
                         </object>
                         <object class="sizeritem" expanded="1">
@@ -831,6 +939,7 @@
                             <object class="wxChoice" expanded="1">
                                 <property name="bg"></property>
                                 <property name="choices"></property>
+                                <property name="context_help"></property>
                                 <property name="enabled">1</property>
                                 <property name="fg"></property>
                                 <property name="font"></property>
@@ -847,6 +956,7 @@
                                 <property name="window_extra_style"></property>
                                 <property name="window_style"></property>
                                 <event name="OnChoice"></event>
+                                <event name="OnUpdateUI"></event>
                             </object>
                         </object>
                     </object>
@@ -859,6 +969,7 @@
                         <property name="minimum_size"></property>
                         <property name="name">bSizer2131</property>
                         <property name="orient">wxHORIZONTAL</property>
+                        <property name="permission">none</property>
                     </object>
                 </object>
             </object>

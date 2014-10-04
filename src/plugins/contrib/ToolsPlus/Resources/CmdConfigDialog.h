@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////////////////////////////////
-// C++ code generated with wxFormBuilder (version Feb 17 2007)
+// C++ code generated with wxFormBuilder (version Aug 17 2007)
 // http://www.wxformbuilder.org/
 //
 // PLEASE DO "NOT" EDIT THIS FILE!
@@ -8,16 +8,7 @@
 #ifndef __noname__
 #define __noname__
 
-// Define WX_GCH in order to support precompiled headers with GCC compiler.
-// You have to create the header "wx_pch.h" and include all files needed
-// for compile your gui inside it.
-// Then, compile it and place the file "wx_pch.h.gch" into the same
-// directory that "wx_pch.h".
-#ifdef WX_GCH
-#include <wx_pch.h>
-#else
 #include <wx/wx.h>
-#endif
 
 #include <wx/button.h>
 #include <wx/spinctrl.h>
@@ -55,6 +46,7 @@ class CmdConfigDialog : public wxPanel
 		wxButton* m_butnew;
 		wxButton* m_butcopy;
 		wxButton* m_butdelete;
+		
 		wxButton* m_butup;
 		wxButton* m_butdown;
 		wxStaticText* m_staticText11;
