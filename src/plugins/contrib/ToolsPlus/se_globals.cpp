@@ -1,3 +1,5 @@
+#include <sdk.h>
+
 #include <editorbase.h>
 #include <editormanager.h>
 

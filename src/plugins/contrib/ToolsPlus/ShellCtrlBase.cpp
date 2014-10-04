@@ -1,3 +1,5 @@
+#include <sdk.h>
+
 #include <wx/notebook.h>
 #include <wx/menu.h>
 #include <wx/textctrl.h>

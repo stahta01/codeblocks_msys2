@@ -1,4 +1,6 @@
-#include <wx/defs.h>
+#include <sdk.h>
+
+#include <wx/defs.h>   // wx/dirdlg.h is missing the normal include of wx/defs.h
 #include <wx/dirdlg.h>
 #include <wx/menu.h>
 #include <wx/textdlg.h>
