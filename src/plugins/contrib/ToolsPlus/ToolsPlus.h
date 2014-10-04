@@ -10,13 +10,13 @@
 #ifndef TOOLSPLUS_H_INCLUDED
 #define TOOLSPLUS_H_INCLUDED
 
-#include <configmanager.h>
-#include <wx/filedlg.h>
-
 #include <cbplugin.h> // for "class cbPlugin"
 #include "shellproperties.h"
 #include "CmdConfigDialog.h"
 #include "ShellCtrlBase.h"
+
+class wxOutputStream;
+class wxInputStream;
 
 class ToolsPlus : public cbPlugin
 {

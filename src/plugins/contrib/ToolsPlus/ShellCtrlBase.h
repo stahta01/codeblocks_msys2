@@ -3,10 +3,12 @@
 
 #include <map>
 
-#include <wx/process.h>
-#include <wx/aui/aui.h>
+#include <wx/panel.h>
+#include <wx/timer.h> // wxTimer & wxTimerEvent
 
-#include "se_globals.h"
+class wxAuiNotebook;
+class wxAuiNotebookEvent;
+class wxWindow;
 
 // CLASSES DEFINED IN THIS LIBRARY
 class ShellManager; //Manages the collection of Shell Control Widgets allowing user interaction with external processes within a tabbed notepage - usually the main app (or some plugin) will declare a global instance of this manager. See the full declaration below for more detail

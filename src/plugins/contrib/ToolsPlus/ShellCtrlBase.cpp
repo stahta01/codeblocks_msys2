@@ -1,11 +1,24 @@
+// sdk.h must be the first include in the file to work as a PCH
 #include <sdk.h>
 
-#include <wx/notebook.h>
-#include <wx/menu.h>
-#include <wx/textctrl.h>
-#include <wx/regex.h>
+#ifndef CB_PRECOMP
+    // wxWidgets non GUI headers in sdk_common.h
+    #include <wx/regex.h>
+
+    // wxWidgets GUI headers in sdk_common.h
+    #include <wx/menu.h>
+    #include <wx/notebook.h>
+    #include <wx/textctrl.h>
+
+    // CB SDK Headers in sdk_common.h
+    #include <globals.h>
+    #include <manager.h>
+    #include <logmanager.h>
+#endif // #ifndef CB_PRECOMP
+
+#include <wx/aui/aui.h>
+
 #include "ShellCtrlBase.h"
-#include <globals.h>
 
 // The global instance of the shell registry
 ShellRegistry& GlobalShellRegistry()

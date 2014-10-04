@@ -1,13 +1,21 @@
+// sdk.h must be the first include in the file to work as a PCH
 #include <sdk.h>
 
-#include <wx/notebook.h>
-#include <wx/textctrl.h>
-#include <wx/regex.h>
+#ifndef CB_PRECOMP
+    // wxWidgets non GUI headers in sdk_common.h
+    #include <wx/process.h>
+    #include <wx/regex.h>
 
-#include <globals.h>
-#include <cbeditor.h>
-#include <configmanager.h>
-#include <editormanager.h>
+    // wxWidgets GUI headers in sdk_common.h
+    #include <wx/notebook.h>
+    #include <wx/textctrl.h>
+
+    // CB SDK Headers in sdk_common.h
+    #include <globals.h>
+    #include <cbeditor.h>
+    #include <configmanager.h>
+    #include <editormanager.h>
+#endif // #ifndef CB_PRECOMP
 
 #include "PipedProcessCtrl.h"
 

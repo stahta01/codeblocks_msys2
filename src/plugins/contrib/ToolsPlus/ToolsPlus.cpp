@@ -1,13 +1,28 @@
+// sdk.h must be the first include in the file to work as a PCH
 #include <sdk.h>
 
-#include <wx/defs.h>   // wx/dirdlg.h is missing the normal include of wx/defs.h
-#include <wx/dirdlg.h>
-#include <wx/menu.h>
-#include <wx/textdlg.h>
+#if !defined(WX_PRECOMP)
+    #include <wx/defs.h>   // wx/dirdlg.h is sometimes missing the normal include of wx/defs.h
+    
+    // wxWidgets GUI headers in wx/wx.h; but, not in sdk_common.h
+    #include <wx/dirdlg.h>
+#endif // #if !defined(WX_PRECOMP)
 
-#include <editorbase.h>
-#include <editormanager.h>
-#include <macrosmanager.h>
+#ifndef CB_PRECOMP
+    // wxWidgets non GUI headers in sdk_common.h
+
+    // wxWidgets GUI headers in sdk_common.h
+    #include <wx/filedlg.h>
+    #include <wx/menu.h>
+    #include <wx/textdlg.h>
+
+    // CB SDK Headers in sdk_common.h
+    #include <cbproject.h>
+    #include <configmanager.h>
+    #include <editorbase.h>
+    #include <editormanager.h>
+    #include <macrosmanager.h>
+#endif // #ifndef CB_PRECOMP
 
 #include "ToolsPlus.h"
 #include "se_globals.h"

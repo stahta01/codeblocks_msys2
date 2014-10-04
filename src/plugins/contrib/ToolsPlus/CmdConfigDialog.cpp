@@ -4,6 +4,21 @@
 //
 ///////////////////////////////////////////////////////////////////////////
 
+// sdk.h must be the first include in the file to work as a PCH
+#include <sdk.h>
+
+#ifndef CB_PRECOMP
+    // wxWidgets non GUI headers in sdk_common.h
+    // wxWidgets GUI headers in sdk_common.h
+    #include <wx/dialog.h>
+    #include <wx/filedlg.h>
+    #include <wx/notebook.h>
+
+    // CB SDK Headers in sdk_common.h
+    #include <configmanager.h>
+#endif // #ifndef CB_PRECOMP
+
+
 #include "ToolsPlus.h"
 #include "CmdConfigDialog.h"
 

@@ -1,10 +1,11 @@
 #ifndef IL_GLOBALS_H
 #define IL_GLOBALS_H
-
-#include <wx/filename.h>
  
 #include <logmanager.h>
-#include <cbproject.h>
+#include <globals.h>    // cbMessageBox
+
+class wxFileName;
+class wxString;
 
 
 wxString GetParentDir(const wxString &path);
