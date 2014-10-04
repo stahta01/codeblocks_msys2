@@ -2,26 +2,21 @@
 // C++ code generated with wxFormBuilder (version Feb  2 2007)
 // http://www.wxformbuilder.org/
 //
-// PLEASE DO "NOT" EDIT THIS FILE!
 ///////////////////////////////////////////////////////////////////////////
 
 #ifndef __CMDCONFIGDIALOG__
 #define __CMDCONFIGDIALOG__
 
-// Define WX_GCH in order to support precompiled headers with GCC compiler.
-// You have to create the header "wx_pch.h" and include all files needed
-// for compile your gui inside it.
-// Then, compile it and place the file "wx_pch.h.gch" into the same
-// directory that "wx_pch.h".
-#ifdef WX_GCH
-#include <wx_pch.h>
-#else
-#include <wx/wx.h>
-#endif
 
+#include <wx/stattext.h>
+#include <wx/listbox.h>
+#include <wx/sizer.h>
 #include <wx/button.h>
+#include <wx/textctrl.h>
 #include <wx/spinctrl.h>
 #include <wx/choice.h>
+#include <wx/panel.h>
+
 
 ///////////////////////////////////////////////////////////////////////////
 
@@ -49,7 +44,6 @@
 /// Class CmdConfigDialog
 ///////////////////////////////////////////////////////////////////////////////
 
-#include <sdk.h>
 #include <configurationpanel.h>
 
 class ToolsPlus;
