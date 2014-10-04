@@ -4,6 +4,7 @@
     <object class="Project" expanded="1">
         <property name="bitmaps"></property>
         <property name="code_generation">C++|XRC</property>
+        <property name="encoding">UTF-8</property>
         <property name="file"></property>
         <property name="first_id">1000</property>
         <property name="icons"></property>
