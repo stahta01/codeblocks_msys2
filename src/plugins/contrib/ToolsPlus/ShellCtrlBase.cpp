@@ -1,4 +1,5 @@
 #include <wx/notebook.h>
+#include <wx/menu.h>
 #include <wx/textctrl.h>
 #include <wx/regex.h>
 #include "ShellCtrlBase.h"

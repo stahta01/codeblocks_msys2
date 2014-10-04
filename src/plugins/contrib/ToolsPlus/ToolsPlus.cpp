@@ -1,3 +1,12 @@
+#include <wx/defs.h>
+#include <wx/dirdlg.h>
+#include <wx/menu.h>
+#include <wx/textdlg.h>
+
+#include <editorbase.h>
+#include <editormanager.h>
+#include <macrosmanager.h>
+
 #include "ToolsPlus.h"
 #include "se_globals.h"
 

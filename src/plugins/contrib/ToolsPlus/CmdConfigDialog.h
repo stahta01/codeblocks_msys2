@@ -17,6 +17,8 @@
 #include <wx/choice.h>
 #include <wx/panel.h>
 
+#include <wx/checkbox.h> // wxCheckBox
+
 
 ///////////////////////////////////////////////////////////////////////////
 
