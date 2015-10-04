@@ -60,7 +60,11 @@ const wxString DEFAULT_CONSOLE_TERM  = _T("xterm -T $TITLE -e");
 #else
 const wxString DEFAULT_CONSOLE_TERM  = _T("osascript -e 'tell app \"Terminal\"' -e 'activate' -e 'do script quoted form of \"$SCRIPT\"' -e 'end tell'");
 #endif
+#ifndef _WIN32
 const wxString DEFAULT_CONSOLE_SHELL = _T("/bin/sh -c");
+#else
+const wxString DEFAULT_CONSOLE_SHELL = _T("cmd /c");
+#endif
 
 #if defined __WXMSW__
 const wxString cbDEFAULT_OPEN_FOLDER_CMD = _T("explorer.exe /select,");
