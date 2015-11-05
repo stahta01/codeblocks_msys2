@@ -257,6 +257,44 @@ wxString UnixFilename(const wxString& filename, wxPathFormat format)
     return result;
 }
 
+wxString UnixFilename2(const wxString& filename, cbPathFormat format)
+{
+    wxString result = filename;
+
+    // Unc-names always override platform specific settings otherwise they become corrupted
+    bool unc_name = result.StartsWith(_T("\\\\"));
+
+    if (platform::windows && !unc_name && format == cbPATH_NATIVE)
+    {
+        format = cbPATH_MSYS;
+    }
+
+    switch (format) {
+      case cbPATH_NATIVE:
+          result = UnixFilename(filename, wxPATH_NATIVE); break;
+      case cbPATH_UNIX:
+          result = UnixFilename(filename, wxPATH_UNIX); break;
+      case cbPATH_MAC:
+          result = UnixFilename(filename, wxPATH_MAC); break;
+      case cbPATH_DOS:
+          result = UnixFilename(filename, wxPATH_DOS); break;
+//          case cbPATH_WIN:
+//              result = UnixFilename(filename, wxPATH_WIN); break;
+      case cbPATH_MSYS:
+          result = UnixFilename(filename, wxPATH_WIN); break;
+      case cbPATH_MAX:
+          break;
+    } // switch
+
+    if ( format == cbPATH_MSYS && !unc_name)
+    {
+        result.Replace(wxT("\\"), wxT("/"));
+        while (result.Replace(wxT("//"), wxT("/")))
+            ; // loop for recursive removal of duplicate slashes
+    }
+    return result;
+}
+
 void QuoteStringIfNeeded(wxString& str)
 {
     if ( NeedQuotes(str) )
