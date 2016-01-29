@@ -4,13 +4,13 @@
 	<Project>
 		<Option title="Code Snippets wx3.0.x" />
 		<Option default_target="Plugin - Win32" />
-		<Option compiler="gcc" />
+		<Option compiler="cygwin" />
 		<Build>
 			<Target title="Plugin">
 				<Option output="../../../devel30/share/CodeBlocks/plugins/codesnippets.dll" prefix_auto="0" extension_auto="0" />
 				<Option object_output="../../../.objs30/plugins/contrib/codesnippets/plugin/" />
 				<Option type="3" />
-				<Option compiler="gcc" />
+				<Option compiler="cygwin" />
 				<Option parameters="--debug-log --multiple-instance -na -ns -nd -p debug" />
 				<Option host_application="../../../devel30/codeblocks.exe" />
 				<Option run_host_application_in_terminal="0" />

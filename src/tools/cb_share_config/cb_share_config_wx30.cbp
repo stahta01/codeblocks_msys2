@@ -4,14 +4,14 @@
 	<Project>
 		<Option title="Code::Blocks Share Config wx3.0.x" />
 		<Option pch_mode="2" />
-		<Option compiler="gcc" />
+		<Option compiler="cygwin" />
 		<Build>
 			<Target title="default">
 				<Option output="../../devel30/cb_share_config" prefix_auto="0" extension_auto="1" />
 				<Option working_dir="../../../devel30" />
 				<Option object_output="../../.objs30/tools/cb_share_config" />
 				<Option type="0" />
-				<Option compiler="gcc" />
+				<Option compiler="cygwin" />
 			</Target>
 			<Environment>
 				<Variable name="WX_CFG" value="" />

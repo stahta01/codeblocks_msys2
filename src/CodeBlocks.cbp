@@ -4,13 +4,13 @@
 	<Project>
 		<Option title="Code::Blocks wx2.8.x" />
 		<Option default_target="src" />
-		<Option compiler="gcc" />
+		<Option compiler="cygwin" />
 		<Build>
 			<Target title="tinyXML">
 				<Option output="base/tinyxml/txml" prefix_auto="1" extension_auto="1" />
 				<Option working_dir="" />
 				<Option type="2" />
-				<Option compiler="gcc" />
+				<Option compiler="cygwin" />
 				<Compiler>
 					<Add directory="include/tinyxml" />
 				</Compiler>
@@ -18,7 +18,7 @@
 			<Target title="AutoRevision">
 				<Option output="build_tools/autorevision/autorevision" prefix_auto="1" extension_auto="1" />
 				<Option type="1" />
-				<Option compiler="gcc" />
+				<Option compiler="cygwin" />
 				<Option projectLinkerOptionsRelation="1" />
 				<Compiler>
 					<Add directory="include" />
@@ -33,7 +33,7 @@
 				<Option output="tools/ConsoleRunner/cb_console_runner" prefix_auto="1" extension_auto="1" />
 				<Option working_dir="tools/ConsoleRunner" />
 				<Option type="1" />
-				<Option compiler="gcc" />
+				<Option compiler="cygwin" />
 				<Option projectLinkerOptionsRelation="1" />
 				<Compiler>
 					<Add option="-Os" />
@@ -43,7 +43,7 @@
 				<Option output="sdk/scripting/lib/squirrel" prefix_auto="1" extension_auto="1" />
 				<Option working_dir="" />
 				<Option type="2" />
-				<Option compiler="gcc" />
+				<Option compiler="cygwin" />
 				<Compiler>
 					<Add option="-fno-inline" />
 					<Add directory="include/scripting/include" />
@@ -55,7 +55,7 @@
 				<Option working_dir="" />
 				<Option external_deps="sdk/scripting/lib/libsquirrel.a;" />
 				<Option type="2" />
-				<Option compiler="gcc" />
+				<Option compiler="cygwin" />
 				<Compiler>
 					<Add option="-fno-inline" />
 					<Add directory="include/scripting/include" />
@@ -67,7 +67,7 @@
 				<Option working_dir="" />
 				<Option external_deps="sdk/scripting/lib/libsquirrel.a;sdk/scripting/lib/libsqstdlib.a;" />
 				<Option type="2" />
-				<Option compiler="gcc" />
+				<Option compiler="cygwin" />
 				<Compiler>
 					<Add option="-fno-inline" />
 					<Add directory="include/scripting/include" />
@@ -78,7 +78,7 @@
 				<Option output="devel/wxscintilla_cb" prefix_auto="1" extension_auto="1" />
 				<Option working_dir="" />
 				<Option type="2" />
-				<Option compiler="gcc" />
+				<Option compiler="cygwin" />
 				<Compiler>
 					<Add option="-D__WX__" />
 					<Add option="-DWINVER=0x0501" />
@@ -104,7 +104,7 @@
 				<Option output="devel/wxpropgrid" prefix_auto="1" extension_auto="1" />
 				<Option working_dir="devel" />
 				<Option type="3" />
-				<Option compiler="gcc" />
+				<Option compiler="cygwin" />
 				<Option createStaticLib="1" />
 				<Compiler>
 					<Add option="-DEXPORT_LIB" />
@@ -127,7 +127,7 @@
 				<Option working_dir="devel" />
 				<Option external_deps="base/tinyxml/libtxml.a;sdk/scripting/lib/libsquirrel.a;sdk/scripting/lib/libsqstdlib.a;sdk/scripting/lib/libsqplus.a;devel/libwxscintilla_cb.a;" />
 				<Option type="3" />
-				<Option compiler="gcc" />
+				<Option compiler="cygwin" />
 				<Option parameters="--debug-log --no-dde --no-check-associations --multiple-instance --verbose -p debug" />
 				<Option createStaticLib="1" />
 				<Option projectLinkerOptionsRelation="2" />
@@ -180,7 +180,7 @@
 				<Option working_dir="devel" />
 				<Option external_deps="devel/libcodeblocks.a;" />
 				<Option type="0" />
-				<Option compiler="gcc" />
+				<Option compiler="cygwin" />
 				<Option parameters="--debug-log --no-dde --no-check-associations --multiple-instance --no-splash-screen --verbose -p debug" />
 				<Option projectLinkerOptionsRelation="2" />
 				<Compiler>
@@ -236,7 +236,7 @@
 				<Option working_dir="devel" />
 				<Option external_deps="devel/libcodeblocks.a;" />
 				<Option type="3" />
-				<Option compiler="gcc" />
+				<Option compiler="cygwin" />
 				<Option parameters="--debug-log --no-dde --no-check-associations --multiple-instance --no-splash-screen --verbose -p debug" />
 				<Option host_application="./codeblocks.exe" />
 				<Option run_host_application_in_terminal="0" />
@@ -269,7 +269,7 @@
 				<Option working_dir="devel" />
 				<Option external_deps="devel/libcodeblocks.a;" />
 				<Option type="3" />
-				<Option compiler="gcc" />
+				<Option compiler="cygwin" />
 				<Option parameters="--debug-log --no-dde --no-check-associations --multiple-instance --no-splash-screen --verbose -p debug" />
 				<Option host_application="./codeblocks.exe" />
 				<Option run_host_application_in_terminal="0" />
@@ -301,7 +301,7 @@
 				<Option working_dir="devel" />
 				<Option external_deps="devel/libcodeblocks.a;" />
 				<Option type="3" />
-				<Option compiler="gcc" />
+				<Option compiler="cygwin" />
 				<Option parameters="--debug-log --no-dde --no-check-associations --multiple-instance --no-splash-screen --verbose -p debug" />
 				<Option host_application="./codeblocks.exe" />
 				<Option run_host_application_in_terminal="0" />
@@ -330,7 +330,7 @@
 				<Option output="plugins/compilergcc/depslib/depslib" prefix_auto="1" extension_auto="1" />
 				<Option working_dir="" />
 				<Option type="2" />
-				<Option compiler="gcc" />
+				<Option compiler="cygwin" />
 				<Compiler>
 					<Add option="-DDEPSLIB_WINDOWS" />
 				</Compiler>
@@ -344,7 +344,7 @@
 				<Option working_dir="devel" />
 				<Option external_deps="devel/libcodeblocks.a;plugins/compilergcc/depslib/libdepslib.a;" />
 				<Option type="3" />
-				<Option compiler="gcc" />
+				<Option compiler="cygwin" />
 				<Option parameters="--debug-log --no-dde --no-check-associations --multiple-instance --no-splash-screen --verbose -p debug" />
 				<Option host_application="./codeblocks.exe" />
 				<Option run_host_application_in_terminal="0" />
@@ -383,7 +383,7 @@
 				<Option working_dir="devel" />
 				<Option external_deps="devel/libcodeblocks.a;" />
 				<Option type="3" />
-				<Option compiler="gcc" />
+				<Option compiler="cygwin" />
 				<Option parameters="--debug-log --no-dde --no-check-associations --multiple-instance --no-splash-screen --verbose -p debug" />
 				<Option host_application="./codeblocks.exe" />
 				<Option run_host_application_in_terminal="0" />
@@ -413,7 +413,7 @@
 				<Option working_dir="devel" />
 				<Option external_deps="devel/libcodeblocks.a;" />
 				<Option type="3" />
-				<Option compiler="gcc" />
+				<Option compiler="cygwin" />
 				<Option parameters="--debug-log --no-dde --no-check-associations --multiple-instance --no-splash-screen --verbose -p debug" />
 				<Option host_application="./codeblocks.exe" />
 				<Option run_host_application_in_terminal="0" />
@@ -449,7 +449,7 @@
 				<Option working_dir="devel" />
 				<Option external_deps="devel/libcodeblocks.a;" />
 				<Option type="3" />
-				<Option compiler="gcc" />
+				<Option compiler="cygwin" />
 				<Option parameters="--debug-log --no-dde --no-check-associations --multiple-instance --no-splash-screen --verbose -p debug" />
 				<Option host_application="./codeblocks.exe" />
 				<Option run_host_application_in_terminal="0" />
@@ -479,7 +479,7 @@
 				<Option working_dir="devel" />
 				<Option external_deps="devel/libcodeblocks.a;" />
 				<Option type="3" />
-				<Option compiler="gcc" />
+				<Option compiler="cygwin" />
 				<Option parameters="--debug-log --no-dde --no-check-associations --multiple-instance --no-splash-screen --verbose -p debug" />
 				<Option host_application="./codeblocks.exe" />
 				<Option run_host_application_in_terminal="0" />
@@ -509,7 +509,7 @@
 				<Option working_dir="devel" />
 				<Option external_deps="devel/libcodeblocks.a;" />
 				<Option type="3" />
-				<Option compiler="gcc" />
+				<Option compiler="cygwin" />
 				<Option parameters="--debug-log --no-dde --no-check-associations --multiple-instance --no-splash-screen --verbose -p debug" />
 				<Option host_application="./codeblocks.exe" />
 				<Option run_host_application_in_terminal="0" />
@@ -539,7 +539,7 @@
 				<Option working_dir="devel" />
 				<Option external_deps="devel/libcodeblocks.a;" />
 				<Option type="3" />
-				<Option compiler="gcc" />
+				<Option compiler="cygwin" />
 				<Option parameters="--debug-log --no-dde --no-check-associations --multiple-instance --no-splash-screen --verbose -p debug" />
 				<Option host_application="./codeblocks.exe" />
 				<Option run_host_application_in_terminal="0" />
@@ -570,7 +570,7 @@
 				<Option working_dir="devel" />
 				<Option external_deps="devel/libcodeblocks.a;" />
 				<Option type="3" />
-				<Option compiler="gcc" />
+				<Option compiler="cygwin" />
 				<Option parameters="--debug-log --no-dde --no-check-associations --multiple-instance --no-splash-screen --verbose -p debug" />
 				<Option host_application="./codeblocks.exe" />
 				<Option run_host_application_in_terminal="0" />
@@ -606,7 +606,7 @@
 				<Option working_dir="devel" />
 				<Option external_deps="devel/libcodeblocks.a;" />
 				<Option type="3" />
-				<Option compiler="gcc" />
+				<Option compiler="cygwin" />
 				<Option parameters="--debug-log --no-dde --no-check-associations --multiple-instance --no-splash-screen --verbose -p debug" />
 				<Option host_application="./codeblocks.exe" />
 				<Option run_host_application_in_terminal="0" />
@@ -638,7 +638,7 @@
 				<Option working_dir="devel" />
 				<Option external_deps="devel/libcodeblocks.a;" />
 				<Option type="3" />
-				<Option compiler="gcc" />
+				<Option compiler="cygwin" />
 				<Option parameters="--debug-log --no-dde --no-check-associations --multiple-instance --no-splash-screen --verbose -p debug" />
 				<Option host_application="./codeblocks.exe" />
 				<Option run_host_application_in_terminal="0" />
@@ -674,7 +674,7 @@
 				<Option working_dir="devel" />
 				<Option external_deps="devel/libcodeblocks.a;" />
 				<Option type="3" />
-				<Option compiler="gcc" />
+				<Option compiler="cygwin" />
 				<Option parameters="--debug-log --no-dde --no-check-associations --multiple-instance --no-splash-screen --verbose -p debug" />
 				<Option host_application="./codeblocks.exe" />
 				<Option run_host_application_in_terminal="0" />

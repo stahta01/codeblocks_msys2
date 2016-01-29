@@ -4,13 +4,13 @@
 	<Project>
 		<Option title="CbLauncher wx3.0.x" />
 		<Option pch_mode="2" />
-		<Option compiler="gcc" />
+		<Option compiler="cygwin" />
 		<Build>
 			<Target title="default">
 				<Option output="../../devel30/CbLauncher" prefix_auto="1" extension_auto="1" />
 				<Option object_output="../../.objs30/tools/CbLauncher" />
 				<Option type="1" />
-				<Option compiler="gcc" />
+				<Option compiler="cygwin" />
 				<Linker>
 					<Add option="-s" />
 					<Add option="-mwindows" />
