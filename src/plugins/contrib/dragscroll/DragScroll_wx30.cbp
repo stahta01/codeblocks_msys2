@@ -18,7 +18,8 @@
 			<Environment>
 				<Variable name="WX_CFG" value="" />
 				<Variable name="WX_SUFFIX" value="u" />
-				<Variable name="WX_VERSION" value="30" />
+				<Variable name="WX_TOOLKIT" value="msw" />
+				<Variable name="WX_VERSION" value="3.0" />
 			</Environment>
 		</Build>
 		<VirtualTargets>

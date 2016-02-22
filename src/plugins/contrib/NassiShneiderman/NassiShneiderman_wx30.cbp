@@ -32,16 +32,12 @@
 					<Add directory="../../../include" />
 					<Add directory="../../../include/tinyxml" />
 					<Add directory="../../../sdk/wxscintilla/include" />
-					<Add directory="$(#WX30.include)" />
-					<Add directory="$(#WX30.lib)/gcc_dll$(WX_CFG)/msw$(WX_SUFFIX)" />
 					<Add directory="$(#boost.include)" />
 				</Compiler>
 				<Linker>
 					<Add option="-Wl,-enable-auto-import" />
 					<Add library="codeblocks" />
-					<Add library="wxmsw$(WX_VERSION)$(WX_SUFFIX)" />
 					<Add directory="../../../devel30" />
-					<Add directory="$(#WX30.lib)/gcc_dll$(WX_CFG)" />
 				</Linker>
 				<ExtraCommands>
 					<Add after="zip -j9 ..\..\..\devel30\share\CodeBlocks\NassiShneiderman.zip manifest.xml" />
@@ -49,7 +45,8 @@
 				<Environment>
 					<Variable name="WX_CFG" value="" />
 					<Variable name="WX_SUFFIX" value="u" />
-					<Variable name="WX_VERSION" value="30" />
+					<Variable name="WX_TOOLKIT" value="msw" />
+					<Variable name="WX_VERSION" value="3.0" />
 				</Environment>
 			</Target>
 		</Build>
