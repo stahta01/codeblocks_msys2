@@ -25,7 +25,6 @@
     #include <wx/wizard.h>
     #include <wx/xrc/xmlres.h>
 
-    #include <wx/wxscintilla.h> // CB Header
     #include <cbexception.h>
     #include <cbproject.h>
     #include <compiler.h>
