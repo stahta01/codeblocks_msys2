@@ -712,6 +712,7 @@
 				</ExtraCommands>
 			</Target>
 			<Environment>
+				<Variable name="CMD_MKDIR_IGNORERR" value="|| exit 0" />
 				<Variable name="WX_CFG" value="" />
 				<Variable name="WX_SUFFIX" value="u" />
 				<Variable name="WX_VERSION" value="30" />
