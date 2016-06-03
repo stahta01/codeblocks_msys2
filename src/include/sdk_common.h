@@ -108,8 +108,6 @@
     #include <wx/xrc/xmlres.h>   // wxXRC  not in wx/wx.h
 
 
-    #include "wx/wxscintilla.h"  // Code::Blocks/wxscintilla header
-
     // basic headers
     #include "settings.h"
     #include "globals.h"
