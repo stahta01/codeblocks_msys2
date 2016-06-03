@@ -44,67 +44,71 @@
 
 #ifdef CB_PRECOMP
 
-    // some common wxWidgets headers
-    #include <wx/app.h>
-    #include <wx/arrstr.h>
-    #include <wx/bmpbuttn.h>
-    #include <wx/button.h>
-    #include <wx/checkbox.h>
-    #include <wx/checklst.h>
-    #include <wx/choice.h>
-    #include <wx/choicdlg.h>
-    #include <wx/colordlg.h>
-    #include <wx/combobox.h>
-    #include <wx/confbase.h>
-    #include <wx/datetime.h>
-    #include <wx/dcclient.h>
-    #include <wx/dialog.h>
-    #include <wx/dir.h>
-    #include <wx/dynarray.h>
-    #include <wx/event.h>
-    #include <wx/file.h>
-    #include <wx/filedlg.h>
-    #include <wx/filename.h>
-    #include <wx/font.h>
-    #include <wx/frame.h>
-    #include <wx/fs_zip.h>
-    #include <wx/hashmap.h>
-    #include <wx/image.h>
-    #include <wx/imaglist.h>
-    #include <wx/intl.h>
-    #include <wx/list.h>
-    #include <wx/listbox.h>
-    #include <wx/listctrl.h>
-    #include <wx/log.h>
-    #include <wx/menu.h>
-    #include <wx/menuitem.h>
-    #include <wx/msgdlg.h>
-    #include <wx/notebook.h>
-    #include <wx/panel.h>
-    #include <wx/print.h>
-    #include <wx/process.h>
-    #include <wx/radiobox.h>
-    #include <wx/radiobut.h>
-    #include <wx/regex.h>
-    #include <wx/sizer.h>
-    #include <wx/slider.h>
-    #include <wx/socket.h>
-    #include <wx/spinctrl.h>
-    #include <wx/splitter.h>
-    #include <wx/statbmp.h>
-    #include <wx/stattext.h>
-    #include <wx/string.h>
-    #include <wx/textdlg.h>
-    #include <wx/textctrl.h>
-    #include <wx/thread.h>
-    #include <wx/timer.h>
-    #include <wx/toolbar.h>
-    #include <wx/treectrl.h>
-    #include <wx/txtstrm.h>
-    #include <wx/utils.h>
-    #include <wx/wfstream.h>
-    #include <wx/wxscintilla.h>
-    #include <wx/xrc/xmlres.h>
+    // Some common non GUI wxWidgets Headers
+    #include <wx/app.h>          // wxBase
+    #include <wx/arrstr.h>       // wxBase
+    #include <wx/choicdlg.h>     // wxBase
+    #include <wx/confbase.h>     // wxBase not in wx/wx.h
+    #include <wx/datetime.h>     // wxBase not in wx/wx.h
+    #include <wx/dir.h>          // wxBase not in wx/wx.h
+    #include <wx/dynarray.h>     // wxBase
+    #include <wx/event.h>        // wxBase
+    #include <wx/file.h>         // wxBase not in wx/wx.h
+    #include <wx/filename.h>     // wxBase not in wx/wx.h
+    #include <wx/fs_zip.h>       // wxBase not in wx/wx.h
+    #include <wx/hashmap.h>      // wxBase
+    #include <wx/intl.h>         // wxBase
+    #include <wx/list.h>         // wxBase
+    #include <wx/log.h>          // wxBase
+    #include <wx/process.h>      // wxBase not in wx/wx.h
+    #include <wx/regex.h>        // wxBase not in wx/wx.h
+    #include <wx/socket.h>       // wxNet  not in wx/wx.h
+    #include <wx/string.h>       // wxBase
+    #include <wx/thread.h>       // wxBase not in wx/wx.h
+    #include <wx/timer.h>        // wxBase
+    #include <wx/txtstrm.h>      // wxBase not in wx/wx.h
+    #include <wx/utils.h>        // wxBase
+    #include <wx/wfstream.h>     // wxBase not in wx/wx.h
+
+    // Some common GUI wxWidgets Headers
+    #include <wx/bmpbuttn.h>     // wxCore
+    #include <wx/button.h>       // wxCore
+    #include <wx/checkbox.h>     // wxCore
+    #include <wx/checklst.h>     // wxCore
+    #include <wx/choice.h>       // wxCore
+    #include <wx/colordlg.h>     // wxCore not in wx/wx.h
+    #include <wx/combobox.h>     // wxCore
+    #include <wx/dcclient.h>     // wxCore
+    #include <wx/dialog.h>       // wxCore
+    #include <wx/filedlg.h>      // wxCore
+    #include <wx/font.h>         // wxCore
+    #include <wx/frame.h>        // wxCore
+    #include <wx/image.h>        // wxCore
+    #include <wx/imaglist.h>     // wxCore not in wx/wx.h
+    #include <wx/listbox.h>      // wxCore
+    #include <wx/listctrl.h>     // wxCore not in wx/wx.h
+    #include <wx/menu.h>         // wxCore
+    #include <wx/menuitem.h>     // wxCore
+    #include <wx/msgdlg.h>       // wxCore
+    #include <wx/notebook.h>     // wxCore not in wx/wx.h
+    #include <wx/panel.h>        // wxCore
+    #include <wx/print.h>        // wxCore not in wx/wx.h
+    #include <wx/radiobox.h>     // wxCore
+    #include <wx/radiobut.h>     // wxCore
+    #include <wx/sizer.h>        // wxCore
+    #include <wx/slider.h>       // wxCore
+    #include <wx/spinctrl.h>     // wxCore not in wx/wx.h
+    #include <wx/splitter.h>     // wxCore not in wx/wx.h
+    #include <wx/statbmp.h>      // wxCore
+    #include <wx/stattext.h>     // wxCore
+    #include <wx/textctrl.h>     // wxCore
+    #include <wx/textdlg.h>      // wxCore
+    #include <wx/toolbar.h>      // wxCore
+    #include <wx/treectrl.h>     // wxCore not in wx/wx.h
+    #include <wx/xrc/xmlres.h>   // wxXRC  not in wx/wx.h
+
+
+    #include "wx/wxscintilla.h"  // Code::Blocks/wxscintilla header
 
     // basic headers
     #include "settings.h"
