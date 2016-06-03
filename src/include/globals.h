@@ -110,6 +110,20 @@ enum FileVisualState
     fvsLast
 };
 
+// the various values for the path format: this mainly affects the path
+// separator but also whether or not the path has the drive part (as under
+// Windows)
+enum cbPathFormat
+{
+    cbPATH_NATIVE   = wxPATH_NATIVE,// the path format for the current platform
+    cbPATH_UNIX     = wxPATH_UNIX,
+    cbPATH_MAC      = wxPATH_MAC,
+    cbPATH_DOS      = wxPATH_DOS,
+    cbPATH_WIN      = wxPATH_WIN,
+    cbPATH_MSYS     = wxPATH_MAX,
+    cbPATH_MAX                      // Not a valid value for specifying path format
+};
+
 class DLLIMPORT cbProjectTreeImages
 {
     public:
@@ -211,6 +225,7 @@ extern DLLIMPORT wxString MakeUniqueString(const wxString& text,  const wxString
 extern DLLIMPORT void AppendArray(const wxArrayString& from, wxArrayString& to);
 
 extern DLLIMPORT wxString UnixFilename(const wxString& filename, wxPathFormat format = wxPATH_NATIVE);
+extern DLLIMPORT wxString UnixFilename2(const wxString& filename, cbPathFormat format = cbPATH_NATIVE);
 extern DLLIMPORT void QuoteStringIfNeeded(wxString& str);
 extern DLLIMPORT bool NeedQuotes(const wxString &str);
 
