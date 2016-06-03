@@ -2,7 +2,6 @@
 #define BASEEXPORTER_INCLUDED
 
 #include <wx/wx.h>
-#include <wx/wxscintilla.h>
 
 #include <editorcolourset.h>
 
