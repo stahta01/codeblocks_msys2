@@ -24,12 +24,12 @@
     #include <wx/treectrl.h>
     #include <wx/xrc/xmlres.h>
 
-    #include <cbstyledtextctrl.h>
     #include <configmanager.h>
     #include <globals.h>
     #include <logmanager.h>
     #include <manager.h>
 #endif
+#include <cbstyledtextctrl.h>
 
 #include <editpairdlg.h>
 
