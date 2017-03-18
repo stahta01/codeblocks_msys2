@@ -20,6 +20,7 @@
 		</Build>
 		<VirtualTargets>
 			<Add alias="All" targets="default;" />
+			<Add alias="Third-party libs" targets="default;" />
 		</VirtualTargets>
 		<Compiler>
 			<Add option="-pipe" />
