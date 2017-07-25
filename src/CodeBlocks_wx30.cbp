@@ -154,7 +154,7 @@
 				<ExtraCommands>
 					<Add before="build_tools/autorevision/autorevision +wx +int +t .. include/autorevision.h" />
 					<Add after="cmd /c if not exist devel30\share\CodeBlocks mkdir devel30\share\CodeBlocks" />
-					<Add after="zip -jq9 devel30\share\CodeBlocks\manager_resources.zip sdk\resources\*.xrc" />
+					<Add after="zip -jq9 devel30/share/CodeBlocks/manager_resources.zip sdk/resources/*.xrc" />
 					<Add after='cmd /c &quot;cd sdk\resources &amp; zip -0 -q ..\..\devel30\share\CodeBlocks\manager_resources.zip images\*.png images\12x12\*.png images\16x16\*.png&quot;' />
 					<Mode after="always" />
 				</ExtraCommands>
@@ -207,8 +207,8 @@
 				<ExtraCommands>
 					<Add before="cmd /c if exist devel30\exchndl.dll del devel30\exchndl.dll" />
 					<Add after="cmd /c if not exist devel30\share\CodeBlocks mkdir devel30\share\CodeBlocks" />
-					<Add after="zip -jq9 devel30\share\CodeBlocks\resources.zip src\resources\*.xrc" />
-					<Add after="zip -jq9 devel30\share\CodeBlocks\start_here.zip src\resources\start_here\*.html src\resources\start_here\*.png" />
+					<Add after="zip -jq9 devel30/share/CodeBlocks/resources.zip src/resources/*.xrc" />
+					<Add after="zip -jq9 devel30/share/CodeBlocks/start_here.zip src/resources/start_here/*.html src/resources/start_here/*.png" />
 					<Add after='cmd /c &quot;cd src\resources &amp; zip -0 -q ..\..\devel30\share\CodeBlocks\resources.zip images\*.png images\16x16\*.png&quot;' />
 					<Add after="cmd /c if not exist devel30\exchndl.dll if exist exchndl\win32\bin\*.dll xcopy /Y exchndl\win32\bin\*.dll devel30\" />
 					<Add after="cmd /c if not exist devel30\symsrv.yes if exist exchndl\win32\bin\symsrv.yes xcopy /Y exchndl\win32\bin\symsrv.yes devel30\" />
@@ -524,7 +524,7 @@
 				</Linker>
 				<ExtraCommands>
 					<Add after="cmd /c if not exist devel30\share\CodeBlocks mkdir devel30\share\CodeBlocks" />
-					<Add after="zip -j9 devel30\share\CodeBlocks\occurrenceshighlighting.zip plugins\occurrenceshighlighting\resources\manifest.xml plugins\occurrenceshighlighting\resources\*.xrc" />
+					<Add after="zip -j9 devel30/share/CodeBlocks/occurrenceshighlighting.zip plugins/occurrenceshighlighting/resources/manifest.xml plugins/occurrenceshighlighting/resources/*.xrc" />
 					<Mode after="always" />
 				</ExtraCommands>
 			</Target>
