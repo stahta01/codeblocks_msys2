@@ -29,6 +29,8 @@
 
 #include "infowindow.h"
 
+#ifndef CB_DISABLE_COMPILER_AUTO_DETECT
+
 BEGIN_EVENT_TABLE(AutoDetectCompilers, wxScrollingDialog)
     EVT_UPDATE_UI(-1, AutoDetectCompilers::OnUpdateUI)
     EVT_BUTTON(XRCID("btnDefault"), AutoDetectCompilers::OnDefaultClick)
@@ -184,3 +186,5 @@ void AutoDetectCompilers::OnUpdateUI(wxUpdateUIEvent& event)
 
     event.Skip();
 }
+
+#endif // CB_DISABLE_COMPILER_AUTO_DETECT

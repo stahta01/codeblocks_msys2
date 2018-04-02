@@ -16,7 +16,9 @@ class CompilerMINGW : public Compiler
         // from MinGW (e.g. the cygwin compiler is derived from this one).
         CompilerMINGW(const wxString& name = _("GNU GCC Compiler"), const wxString& ID = _T("gcc"));
         virtual ~CompilerMINGW();
+#ifndef CB_DISABLE_COMPILER_AUTO_DETECT
         virtual AutoDetectResult AutoDetectInstallationDir();
+#endif // CB_DISABLE_COMPILER_AUTO_DETECT
         virtual CompilerCommandGenerator* GetCommandGenerator(cbProject *project);
     protected:
         virtual Compiler* CreateCopy();

@@ -144,7 +144,9 @@ BEGIN_EVENT_TABLE(CompilerOptionsDlg, wxPanel)
     EVT_BUTTON(                XRCID("btnDeleteVar"),                   CompilerOptionsDlg::OnRemoveVarClick)
     EVT_BUTTON(                XRCID("btnClearVar"),                    CompilerOptionsDlg::OnClearVarClick)
     EVT_BUTTON(                XRCID("btnMasterPath"),                  CompilerOptionsDlg::OnMasterPathClick)
+#ifndef CB_DISABLE_COMPILER_AUTO_DETECT
     EVT_BUTTON(                XRCID("btnAutoDetect"),                  CompilerOptionsDlg::OnAutoDetectClick)
+#endif // CB_DISABLE_COMPILER_AUTO_DETECT
     EVT_BUTTON(                XRCID("btnCcompiler"),                   CompilerOptionsDlg::OnSelectProgramClick)
     EVT_BUTTON(                XRCID("btnCPPcompiler"),                 CompilerOptionsDlg::OnSelectProgramClick)
     EVT_BUTTON(                XRCID("btnLinker"),                      CompilerOptionsDlg::OnSelectProgramClick)
@@ -1666,6 +1668,7 @@ void CompilerOptionsDlg::UpdateCompilerForTargets(int compilerIdx)
     }
 } // UpdateCompilerForTargets
 
+#ifndef CB_DISABLE_COMPILER_AUTO_DETECT
 void CompilerOptionsDlg::AutoDetectCompiler()
 {
     Compiler* compiler = CompilerFactory::GetCompiler(m_CurrentCompilerIdx);
@@ -1711,6 +1714,7 @@ void CompilerOptionsDlg::AutoDetectCompiler()
        ArrayString2ListBox(extraPaths, XRCCTRL(*this, "lstExtraPaths", wxListBox));
     m_bDirty = true;
 } // AutoDetectCompiler
+#endif // CB_DISABLE_COMPILER_AUTO_DETECT
 
 wxListBox* CompilerOptionsDlg::GetDirsListBox()
 {
@@ -2215,8 +2219,10 @@ void CompilerOptionsDlg::OnResetCompilerClick(cb_unused wxCommandEvent& event)
             }
             compiler->Reset();
         }
+#ifndef CB_DISABLE_COMPILER_AUTO_DETECT
         // run auto-detection
         AutoDetectCompiler();
+#endif // CB_DISABLE_COMPILER_AUTO_DETECT
         CompilerFactory::SaveSettings();
         // refresh settings in dialog
         DoFillCompilerDependentSettings();
@@ -2606,10 +2612,12 @@ void CompilerOptionsDlg::OnMasterPathClick(cb_unused wxCommandEvent& event)
     }
 } // OnMasterPathClick
 
+#ifndef CB_DISABLE_COMPILER_AUTO_DETECT
 void CompilerOptionsDlg::OnAutoDetectClick(cb_unused wxCommandEvent& event)
 {
     AutoDetectCompiler();
 } // OnAutoDetectClick
+#endif // CB_DISABLE_COMPILER_AUTO_DETECT
 
 void CompilerOptionsDlg::OnSelectProgramClick(wxCommandEvent& event)
 {

@@ -285,6 +285,7 @@ void CompilerFactory::LoadSettings()
         }
     }
 
+#ifndef CB_DISABLE_COMPILER_AUTO_DETECT
     // auto-detect missing compilers
     if (needAutoDetection)
     {
@@ -293,6 +294,7 @@ void CompilerFactory::LoadSettings()
         adc.ShowModal();
         adc.Raise();
     }
+#endif // CB_DISABLE_COMPILER_AUTO_DETECT
 }
 
 Compiler* CompilerFactory::SelectCompilerUI(const wxString& message, const wxString& preselectedID)

@@ -344,8 +344,10 @@ class DLLIMPORT Compiler : public CompileOptionsBase
           * Override if not using standard XML loading.
           */
         virtual void ReloadOptions();
+#ifndef CB_DISABLE_COMPILER_AUTO_DETECT
         /** @brief Try to auto-detect the compiler's installation directory */
         virtual AutoDetectResult AutoDetectInstallationDir() = 0;
+#endif // CB_DISABLE_COMPILER_AUTO_DETECT
 
         /** @brief Get this compiler's unique ID */
         const wxString& GetID() const { return m_ID; }

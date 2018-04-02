@@ -52,6 +52,7 @@ CompilerCommandGenerator* CompilerMINGW::GetCommandGenerator(cbProject *project)
     return generator;
 }
 
+#ifndef CB_DISABLE_COMPILER_AUTO_DETECT
 AutoDetectResult CompilerMINGW::AutoDetectInstallationDir()
 {
     // try to find MinGW in environment variable PATH first
@@ -168,6 +169,7 @@ AutoDetectResult CompilerMINGW::AutoDetectInstallationDir()
     SetVersionString();
     return ret;
 }
+#endif // CB_DISABLE_COMPILER_AUTO_DETECT
 
 void CompilerMINGW::SetVersionString()
 {
