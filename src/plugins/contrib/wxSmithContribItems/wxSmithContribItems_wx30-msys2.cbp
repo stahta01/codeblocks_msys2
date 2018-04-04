@@ -42,6 +42,8 @@
 					<Add directory="../wxContribItems/wxled/led/include" />
 					<Add directory="../wxContribItems/wxled/ledpanel/include" />
 					<Add directory="../wxContribItems/wxmathplot" />
+					<Add directory="$(TARGET_COMPILER_DIR)lib/wx/include/$(WX_TOOLKIT)-unicode-$(WX_VERSION)" />
+					<Add directory="$(TARGET_COMPILER_DIR)include/wx-$(WX_VERSION)" />
 				</Compiler>
 				<Linker>
 					<Add library="wxsmithlib" />
@@ -55,6 +57,9 @@
 					<Add library="wxspeedbutton" />
 					<Add library="wxled" />
 					<Add library="wxmathplot" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_propgrid-$(WX_VERSION).dll" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_core-$(WX_VERSION).dll" />
+					<Add library="wx_base$(WX_SUFFIX)-$(WX_VERSION).dll" />
 					<Add directory="../../../devel30" />
 				</Linker>
 				<ExtraCommands>
@@ -63,9 +68,9 @@
 				</ExtraCommands>
 			</Target>
 			<Environment>
-				<Variable name="WX_CFG" value="" />
 				<Variable name="WX_SUFFIX" value="u" />
-				<Variable name="WX_VERSION" value="30" />
+				<Variable name="WX_TOOLKIT" value="msw" />
+				<Variable name="WX_VERSION" value="3.0" />
 			</Environment>
 		</Build>
 		<VirtualTargets>
@@ -78,11 +83,11 @@
 			<Add option="-mthreads" />
 			<Add option="-fmessage-length=0" />
 			<Add option="-fexceptions" />
+			<Add option="-std=gnu++11" />
 			<Add option="-DHAVE_W32API_H" />
 			<Add option="-D__WXMSW__" />
 			<Add option="-DWXUSINGDLL" />
 			<Add option="-DwxUSE_UNICODE" />
-			<Add option="-std=gnu++11" />
 		</Compiler>
 		<Linker>
 			<Add option="-Wl,--enable-auto-import" />

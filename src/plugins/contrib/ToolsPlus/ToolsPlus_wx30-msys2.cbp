@@ -18,13 +18,17 @@
 				</Compiler>
 				<Linker>
 					<Add library="codeblocks" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_aui-$(WX_VERSION).dll" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_core-$(WX_VERSION).dll" />
+					<Add library="wx_base$(WX_SUFFIX)-$(WX_VERSION).dll" />
 					<Add library="gdi32" />
 					<Add directory="../../../devel30" />
 				</Linker>
 			</Target>
 			<Environment>
 				<Variable name="WX_SUFFIX" value="u" />
-				<Variable name="WX_VERSION" value="30" />
+				<Variable name="WX_TOOLKIT" value="msw" />
+				<Variable name="WX_VERSION" value="3.0" />
 			</Environment>
 		</Build>
 		<VirtualTargets>
@@ -36,6 +40,7 @@
 			<Add option="-mthreads" />
 			<Add option="-fmessage-length=0" />
 			<Add option="-fexceptions" />
+			<Add option="-std=gnu++11" />
 			<Add option="-DWXUSINGDLL" />
 			<Add option="-DHAVE_W32API_H" />
 			<Add option="-D__WXMSW__" />
@@ -43,7 +48,6 @@
 			<Add option="-DNOPCH" />
 			<Add option="-DwxUSE_UNICODE" />
 			<Add option="-DBUILDING_PLUGIN" />
-			<Add option="-std=gnu++11" />
 			<Add directory="../../../include" />
 			<Add directory="../../../include/tinyxml" />
 			<Add directory="../../../sdk/wxscintilla/include" />
@@ -53,6 +57,8 @@
 			<Add directory="../../../include/mozilla_chardet/xpcom" />
 			<Add directory="../../../include/mozilla_chardet/xpcom/base" />
 			<Add directory="../../../include/mozilla_chardet/xpcom/glue" />
+			<Add directory="$(TARGET_COMPILER_DIR)lib/wx/include/$(WX_TOOLKIT)-unicode-$(WX_VERSION)" />
+			<Add directory="$(TARGET_COMPILER_DIR)include/wx-$(WX_VERSION)" />
 		</Compiler>
 		<Linker>
 			<Add option="-mthreads" />

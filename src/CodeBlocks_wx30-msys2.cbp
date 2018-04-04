@@ -95,6 +95,8 @@
 					<Add directory="sdk/wxscintilla/src/scintilla/include" />
 					<Add directory="sdk/wxscintilla/src/scintilla/src" />
 					<Add directory="sdk/wxscintilla/src/scintilla/lexlib" />
+					<Add directory="$(TARGET_COMPILER_DIR)/lib/wx/include/msw-unicode-$(WX_VERSION)" />
+					<Add directory="$(TARGET_COMPILER_DIR)/include/wx-$(WX_VERSION)" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="sdk/wxscintilla/include" />
@@ -133,6 +135,8 @@
 					<Add directory="include/mozilla_chardet/xpcom" />
 					<Add directory="include/mozilla_chardet/xpcom/base" />
 					<Add directory="include/mozilla_chardet/xpcom/glue" />
+					<Add directory="$(TARGET_COMPILER_DIR)/lib/wx/include/msw-unicode-$(WX_VERSION)" />
+					<Add directory="$(TARGET_COMPILER_DIR)/include/wx-$(WX_VERSION)" />
 				</Compiler>
 				<Linker>
 					<Add option="-Wl,--enable-auto-image-base" />
@@ -146,6 +150,14 @@
 					<Add library="sqplus" />
 					<Add library="sqstdlib" />
 					<Add library="squirrel" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_aui-$(WX_VERSION).dll" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_xrc-$(WX_VERSION).dll" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_html-$(WX_VERSION).dll" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_adv-$(WX_VERSION).dll" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_core-$(WX_VERSION).dll" />
+					<Add library="wx_base$(WX_SUFFIX)_xml-$(WX_VERSION).dll" />
+					<Add library="wx_base$(WX_SUFFIX)_net-$(WX_VERSION).dll" />
+					<Add library="wx_base$(WX_SUFFIX)-$(WX_VERSION).dll" />
 					<Add library="gdi32" />
 					<Add directory="devel30" />
 					<Add directory="sdk/scripting/lib" />
@@ -179,11 +191,23 @@
 					<Add directory="include/mozilla_chardet/xpcom/base" />
 					<Add directory="include/mozilla_chardet/xpcom/glue" />
 					<Add directory="exchndl/win32/include" />
+					<Add directory="$(TARGET_COMPILER_DIR)/lib/wx/include/msw-unicode-$(WX_VERSION)" />
+					<Add directory="$(TARGET_COMPILER_DIR)/include/wx-$(WX_VERSION)" />
 				</Compiler>
+				<ResourceCompiler>
+					<Add directory="$(TARGET_COMPILER_DIR)/include/wx-$(WX_VERSION)" />
+				</ResourceCompiler>
 				<Linker>
 					<Add option="-Wl,--enable-auto-import" />
 					<Add option="-Wl,--no-undefined" />
 					<Add library="codeblocks" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_propgrid-$(WX_VERSION).dll" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_aui-$(WX_VERSION).dll" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_xrc-$(WX_VERSION).dll" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_html-$(WX_VERSION).dll" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_adv-$(WX_VERSION).dll" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_core-$(WX_VERSION).dll" />
+					<Add library="wx_base$(WX_SUFFIX)-$(WX_VERSION).dll" />
 					<Add library="exchndl" />
 					<Add library="shfolder" />
 					<Add library="kernel32" />
@@ -231,6 +255,8 @@
 					<Add directory="include/scripting/include" />
 					<Add directory="include/scripting/sqplus" />
 					<Add directory="include/scripting/bindings" />
+					<Add directory="$(TARGET_COMPILER_DIR)/lib/wx/include/msw-unicode-$(WX_VERSION)" />
+					<Add directory="$(TARGET_COMPILER_DIR)/include/wx-$(WX_VERSION)" />
 				</Compiler>
 				<Linker>
 					<Add option="-Wl,--enable-auto-image-base" />
@@ -239,6 +265,9 @@
 					<Add option="-Wl,--no-undefined" />
 					<Add option="-mthreads" />
 					<Add library="codeblocks" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_xrc-$(WX_VERSION).dll" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_core-$(WX_VERSION).dll" />
+					<Add library="wx_base$(WX_SUFFIX)-$(WX_VERSION).dll" />
 					<Add directory="devel30" />
 				</Linker>
 				<ExtraCommands>
@@ -263,6 +292,8 @@
 					<Add option="-DASTYLE_LIB" />
 					<Add directory="include" />
 					<Add directory="plugins/astyle/astyle" />
+					<Add directory="$(TARGET_COMPILER_DIR)/lib/wx/include/$(WX_TOOLKIT)-unicode-$(WX_VERSION)" />
+					<Add directory="$(TARGET_COMPILER_DIR)/include/wx-$(WX_VERSION)" />
 				</Compiler>
 				<Linker>
 					<Add option="-Wl,--enable-auto-image-base" />
@@ -271,6 +302,9 @@
 					<Add option="-Wl,--no-undefined" />
 					<Add option="-mthreads" />
 					<Add library="codeblocks" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_xrc-$(WX_VERSION).dll" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_core-$(WX_VERSION).dll" />
+					<Add library="wx_base$(WX_SUFFIX)-$(WX_VERSION).dll" />
 					<Add directory="devel30" />
 				</Linker>
 				<ExtraCommands>
@@ -293,6 +327,8 @@
 				<Compiler>
 					<Add option="-DBUILDING_PLUGIN" />
 					<Add directory="include" />
+					<Add directory="$(TARGET_COMPILER_DIR)lib/wx/include/$(WX_TOOLKIT)-unicode-$(WX_VERSION)" />
+					<Add directory="$(TARGET_COMPILER_DIR)include/wx-$(WX_VERSION)" />
 				</Compiler>
 				<Linker>
 					<Add option="-Wl,--enable-auto-image-base" />
@@ -301,6 +337,9 @@
 					<Add option="-Wl,--no-undefined" />
 					<Add option="-mthreads" />
 					<Add library="codeblocks" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_xrc-$(WX_VERSION).dll" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_core-$(WX_VERSION).dll" />
+					<Add library="wx_base$(WX_SUFFIX)-$(WX_VERSION).dll" />
 					<Add directory="devel30" />
 				</Linker>
 				<ExtraCommands>
@@ -340,6 +379,8 @@
 					<Add directory="plugins/compilergcc/depslib/src" />
 					<Add directory="include/scripting/include" />
 					<Add directory="include/scripting/sqplus" />
+					<Add directory="$(TARGET_COMPILER_DIR)/lib/wx/include/msw-unicode-$(WX_VERSION)" />
+					<Add directory="$(TARGET_COMPILER_DIR)/include/wx-$(WX_VERSION)" />
 				</Compiler>
 				<Linker>
 					<Add option="-Wl,--enable-auto-image-base" />
@@ -349,6 +390,11 @@
 					<Add option="-mthreads" />
 					<Add library="codeblocks" />
 					<Add library="depslib" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_propgrid-$(WX_VERSION).dll" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_xrc-$(WX_VERSION).dll" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_core-$(WX_VERSION).dll" />
+					<Add library="wx_base$(WX_SUFFIX)_xml-$(WX_VERSION).dll" />
+					<Add library="wx_base$(WX_SUFFIX)-$(WX_VERSION).dll" />
 					<Add directory="devel30" />
 					<Add directory="plugins/compilergcc/depslib" />
 				</Linker>
@@ -375,6 +421,8 @@
 				<Compiler>
 					<Add option="-DBUILDING_PLUGIN" />
 					<Add directory="include" />
+					<Add directory="$(TARGET_COMPILER_DIR)lib/wx/include/$(WX_TOOLKIT)-unicode-$(WX_VERSION)" />
+					<Add directory="$(TARGET_COMPILER_DIR)include/wx-$(WX_VERSION)" />
 				</Compiler>
 				<Linker>
 					<Add option="-Wl,--enable-auto-image-base" />
@@ -383,6 +431,9 @@
 					<Add option="-Wl,--no-undefined" />
 					<Add option="-mthreads" />
 					<Add library="codeblocks" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_xrc-$(WX_VERSION).dll" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_core-$(WX_VERSION).dll" />
+					<Add library="wx_base$(WX_SUFFIX)-$(WX_VERSION).dll" />
 					<Add directory="devel30" />
 				</Linker>
 				<ExtraCommands>
@@ -412,6 +463,8 @@
 					<Add directory="include/mozilla_chardet/xpcom" />
 					<Add directory="include/mozilla_chardet/xpcom/base" />
 					<Add directory="include/mozilla_chardet/xpcom/glue" />
+					<Add directory="$(TARGET_COMPILER_DIR)lib/wx/include/$(WX_TOOLKIT)-unicode-$(WX_VERSION)" />
+					<Add directory="$(TARGET_COMPILER_DIR)include/wx-$(WX_VERSION)" />
 				</Compiler>
 				<Linker>
 					<Add option="-Wl,--enable-auto-image-base" />
@@ -420,6 +473,10 @@
 					<Add option="-Wl,--no-undefined" />
 					<Add option="-mthreads" />
 					<Add library="codeblocks" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_aui-$(WX_VERSION).dll" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_xrc-$(WX_VERSION).dll" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_core-$(WX_VERSION).dll" />
+					<Add library="wx_base$(WX_SUFFIX)-$(WX_VERSION).dll" />
 					<Add directory="devel30" />
 				</Linker>
 				<ExtraCommands>
@@ -442,6 +499,8 @@
 				<Compiler>
 					<Add option="-DBUILDING_PLUGIN" />
 					<Add directory="include" />
+					<Add directory="$(TARGET_COMPILER_DIR)lib/wx/include/$(WX_TOOLKIT)-unicode-$(WX_VERSION)" />
+					<Add directory="$(TARGET_COMPILER_DIR)include/wx-$(WX_VERSION)" />
 				</Compiler>
 				<Linker>
 					<Add option="-Wl,--enable-auto-image-base" />
@@ -450,6 +509,9 @@
 					<Add option="-Wl,--no-undefined" />
 					<Add option="-mthreads" />
 					<Add library="codeblocks" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_xrc-$(WX_VERSION).dll" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_core-$(WX_VERSION).dll" />
+					<Add library="wx_base$(WX_SUFFIX)-$(WX_VERSION).dll" />
 					<Add directory="devel30" />
 				</Linker>
 				<ExtraCommands>
@@ -472,6 +534,8 @@
 				<Compiler>
 					<Add option="-DBUILDING_PLUGIN" />
 					<Add directory="include" />
+					<Add directory="$(TARGET_COMPILER_DIR)lib/wx/include/$(WX_TOOLKIT)-unicode-$(WX_VERSION)" />
+					<Add directory="$(TARGET_COMPILER_DIR)include/wx-$(WX_VERSION)" />
 				</Compiler>
 				<Linker>
 					<Add option="-Wl,--enable-auto-image-base" />
@@ -480,6 +544,10 @@
 					<Add option="-Wl,--no-undefined" />
 					<Add option="-mthreads" />
 					<Add library="codeblocks" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_xrc-$(WX_VERSION).dll" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_html-$(WX_VERSION).dll" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_core-$(WX_VERSION).dll" />
+					<Add library="wx_base$(WX_SUFFIX)-$(WX_VERSION).dll" />
 					<Add directory="devel30" />
 				</Linker>
 				<ExtraCommands>
@@ -502,6 +570,8 @@
 				<Compiler>
 					<Add option="-DBUILDING_PLUGIN" />
 					<Add directory="include" />
+					<Add directory="$(TARGET_COMPILER_DIR)lib/wx/include/$(WX_TOOLKIT)-unicode-$(WX_VERSION)" />
+					<Add directory="$(TARGET_COMPILER_DIR)include/wx-$(WX_VERSION)" />
 				</Compiler>
 				<Linker>
 					<Add option="-Wl,--enable-auto-image-base" />
@@ -510,6 +580,9 @@
 					<Add option="-Wl,--no-undefined" />
 					<Add option="-mthreads" />
 					<Add library="codeblocks" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_xrc-$(WX_VERSION).dll" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_core-$(WX_VERSION).dll" />
+					<Add library="wx_base$(WX_SUFFIX)-$(WX_VERSION).dll" />
 					<Add directory="devel30" />
 				</Linker>
 				<ExtraCommands>
@@ -532,6 +605,8 @@
 				<Compiler>
 					<Add option="-DBUILDING_PLUGIN" />
 					<Add directory="include" />
+					<Add directory="$(TARGET_COMPILER_DIR)lib/wx/include/$(WX_TOOLKIT)-unicode-$(WX_VERSION)" />
+					<Add directory="$(TARGET_COMPILER_DIR)include/wx-$(WX_VERSION)" />
 				</Compiler>
 				<Linker>
 					<Add option="-Wl,--enable-auto-image-base" />
@@ -540,6 +615,8 @@
 					<Add option="-Wl,--no-undefined" />
 					<Add option="-mthreads" />
 					<Add library="codeblocks" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_core-$(WX_VERSION).dll" />
+					<Add library="wx_base$(WX_SUFFIX)-$(WX_VERSION).dll" />
 					<Add directory="devel30" />
 				</Linker>
 				<ExtraCommands>
@@ -568,6 +645,8 @@
 					<Add directory="include/mozilla_chardet/xpcom" />
 					<Add directory="include/mozilla_chardet/xpcom/base" />
 					<Add directory="include/mozilla_chardet/xpcom/glue" />
+					<Add directory="$(TARGET_COMPILER_DIR)lib/wx/include/$(WX_TOOLKIT)-unicode-$(WX_VERSION)" />
+					<Add directory="$(TARGET_COMPILER_DIR)include/wx-$(WX_VERSION)" />
 				</Compiler>
 				<Linker>
 					<Add option="-Wl,--enable-auto-image-base" />
@@ -576,6 +655,8 @@
 					<Add option="-Wl,--no-undefined" />
 					<Add option="-mthreads" />
 					<Add library="codeblocks" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_core-$(WX_VERSION).dll" />
+					<Add library="wx_base$(WX_SUFFIX)-$(WX_VERSION).dll" />
 					<Add directory="devel30" />
 				</Linker>
 				<ExtraCommands>
@@ -600,6 +681,8 @@
 					<Add directory="include" />
 					<Add directory="include/scripting/include" />
 					<Add directory="include/scripting/sqplus" />
+					<Add directory="$(TARGET_COMPILER_DIR)lib/wx/include/$(WX_TOOLKIT)-unicode-$(WX_VERSION)" />
+					<Add directory="$(TARGET_COMPILER_DIR)include/wx-$(WX_VERSION)" />
 				</Compiler>
 				<Linker>
 					<Add option="-Wl,--enable-auto-image-base" />
@@ -608,6 +691,10 @@
 					<Add option="-Wl,--no-undefined" />
 					<Add option="-mthreads" />
 					<Add library="codeblocks" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_xrc-$(WX_VERSION).dll" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_adv-$(WX_VERSION).dll" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_core-$(WX_VERSION).dll" />
+					<Add library="wx_base$(WX_SUFFIX)-$(WX_VERSION).dll" />
 					<Add directory="devel30" />
 				</Linker>
 				<ExtraCommands>
@@ -636,6 +723,8 @@
 					<Add directory="include/mozilla_chardet/xpcom" />
 					<Add directory="include/mozilla_chardet/xpcom/base" />
 					<Add directory="include/mozilla_chardet/xpcom/glue" />
+					<Add directory="$(TARGET_COMPILER_DIR)lib/wx/include/$(WX_TOOLKIT)-unicode-$(WX_VERSION)" />
+					<Add directory="$(TARGET_COMPILER_DIR)include/wx-$(WX_VERSION)" />
 				</Compiler>
 				<Linker>
 					<Add option="-Wl,--enable-auto-image-base" />
@@ -644,6 +733,9 @@
 					<Add option="-Wl,--no-undefined" />
 					<Add option="-mthreads" />
 					<Add library="codeblocks" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_xrc-$(WX_VERSION).dll" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_core-$(WX_VERSION).dll" />
+					<Add library="wx_base$(WX_SUFFIX)-$(WX_VERSION).dll" />
 					<Add directory="devel30" />
 				</Linker>
 				<ExtraCommands>
@@ -672,6 +764,8 @@
 					<Add option="-DNOPCH" />
 					<Add option="-DwxUSE_UNICODE" />
 					<Add directory="include" />
+					<Add directory="$(TARGET_COMPILER_DIR)lib/wx/include/$(WX_TOOLKIT)-unicode-$(WX_VERSION)" />
+					<Add directory="$(TARGET_COMPILER_DIR)include/wx-$(WX_VERSION)" />
 				</Compiler>
 				<Linker>
 					<Add option="-Wl,--enable-auto-image-base" />
@@ -680,6 +774,7 @@
 					<Add option="-Wl,--no-undefined" />
 					<Add option="-mthreads" />
 					<Add library="codeblocks" />
+					<Add library="wx_base$(WX_SUFFIX)-$(WX_VERSION).dll" />
 					<Add directory="devel30" />
 				</Linker>
 				<ExtraCommands>
@@ -690,7 +785,8 @@
 			</Target>
 			<Environment>
 				<Variable name="WX_SUFFIX" value="u" />
-				<Variable name="WX_VERSION" value="30" />
+				<Variable name="WX_TOOLKIT" value="msw" />
+				<Variable name="WX_VERSION" value="3.0" />
 			</Environment>
 		</Build>
 		<VirtualTargets>
