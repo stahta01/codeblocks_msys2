@@ -16,6 +16,7 @@
 				<Option createStaticLib="1" />
 				<Compiler>
 					<Add option="-DWXMAKINGDLL_FNB" />
+					<Add option="-DWXUSINGDLL" />
 					<Add directory="wxFlatNotebook/include" />
 				</Compiler>
 				<Linker>
@@ -31,6 +32,7 @@
 				<Option compiler="gcc" />
 				<Option createStaticLib="1" />
 				<Compiler>
+					<Add option="-DWXUSINGDLL" />
 					<Add directory="wxDateTimePicker/include" />
 					<Add directory="wxDateTimePicker/images" />
 				</Compiler>
@@ -49,6 +51,7 @@
 				<Option createStaticLib="1" />
 				<Compiler>
 					<Add option="-DWXMAKINGDLL_CHART" />
+					<Add option="-DWXUSINGDLL" />
 					<Add directory="wxchart/include" />
 				</Compiler>
 				<Linker>
@@ -65,6 +68,7 @@
 				<Option createStaticLib="1" />
 				<Compiler>
 					<Add option="-DWXMAKINGDLL_THINGS" />
+					<Add option="-DWXUSINGDLL" />
 					<Add directory="wxthings/include" />
 				</Compiler>
 				<Linker>
@@ -80,6 +84,7 @@
 				<Option compiler="gcc" />
 				<Option createStaticLib="1" />
 				<Compiler>
+					<Add option="-DWXUSINGDLL" />
 					<Add directory="wxImagePanel/include" />
 				</Compiler>
 				<Linker>
@@ -95,6 +100,9 @@
 				<Option type="3" />
 				<Option compiler="gcc" />
 				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-DWXUSINGDLL" />
+				</Compiler>
 				<Linker>
 					<Add option="-Wl,--export-all-symbols" />
 					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_core-$(WX_VERSION).dll" />
@@ -109,6 +117,7 @@
 				<Option compiler="gcc" />
 				<Option createStaticLib="1" />
 				<Compiler>
+					<Add option="-DWXUSINGDLL" />
 					<Add directory="KWIC/include" />
 				</Compiler>
 				<Linker>
@@ -125,6 +134,7 @@
 				<Option compiler="gcc" />
 				<Option createStaticLib="1" />
 				<Compiler>
+					<Add option="-DWXUSINGDLL" />
 					<Add directory="wxled/ledpanel/include" />
 					<Add directory="wxled/lcdWindow/include" />
 					<Add directory="wxled/led/include" />
@@ -146,6 +156,7 @@
 				<Option compiler="gcc" />
 				<Option createStaticLib="1" />
 				<Compiler>
+					<Add option="-DWXUSINGDLL" />
 					<Add directory="wxmathplot" />
 				</Compiler>
 				<Linker>
@@ -172,7 +183,6 @@
 			<Add option="-std=gnu++11" />
 			<Add option="-DHAVE_W32API_H" />
 			<Add option="-D__WXMSW__" />
-			<Add option="-DWXMAKINGDLL" />
 			<Add option="-DwxUSE_UNICODE" />
 			<Add directory="$(TARGET_COMPILER_DIR)lib/wx/include/$(WX_TOOLKIT)-unicode-$(WX_VERSION)" />
 			<Add directory="$(TARGET_COMPILER_DIR)include/wx-$(WX_VERSION)" />
