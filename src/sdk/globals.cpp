@@ -20,11 +20,8 @@
     #include <wx/menu.h>
     #include <wx/textdlg.h>
 
-    #include "wx/wxscintilla.h"
-
     #include "cbexception.h"
     #include "configmanager.h" // ReadBool
-    #include "filemanager.h"
     #include "globals.h"
     #include "logmanager.h"
     #include "manager.h"
@@ -40,9 +37,12 @@
 #include <wx/msgdlg.h>
 #include <wx/tokenzr.h>
 
+#include "wx/wxscintilla.h"
+
 #include <algorithm>
 #include <string>
 
+#include "filemanager.h"
 #include "filefilters.h"
 #include "tinywxuni.h"
 #include "filegroupsandmasks.h"
