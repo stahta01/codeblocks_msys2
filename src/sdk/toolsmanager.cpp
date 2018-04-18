@@ -15,20 +15,21 @@
     #include <wx/menu.h>
     #include <wx/msgdlg.h>
 
-    #include "toolsmanager.h"
     #include "manager.h"
-    #include "macrosmanager.h"
     #include "configmanager.h"
     #include "logmanager.h"
     #include "configmanager.h"
-    #include "pipedprocess.h"
     #include "globals.h"
     #include "sdk_events.h"
 #endif
 
 #include <wx/mdi.h>
 #include <wx/listimpl.cpp>
+
 #include "configuretoolsdlg.h"
+#include "macrosmanager.h"
+#include "pipedprocess.h"
+#include "toolsmanager.h"
 
 template<> ToolsManager* Mgr<ToolsManager>::instance = nullptr;
 template<> bool  Mgr<ToolsManager>::isShutdown = false;

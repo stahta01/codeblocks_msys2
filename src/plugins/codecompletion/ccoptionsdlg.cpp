@@ -24,7 +24,6 @@
     #include <wx/treectrl.h>
     #include <wx/xrc/xmlres.h>
 
-    #include <cbstyledtextctrl.h>
     #include <configmanager.h>
     #include <globals.h>
     #include <logmanager.h>
@@ -34,6 +33,7 @@
 #include <editpairdlg.h>
 
 #include "cbcolourmanager.h"
+#include <cbstyledtextctrl.h>
 #include "ccoptionsdlg.h"
 #include "codecompletion.h"
 #include "doxygen_parser.h" // For DocumentationHelper
