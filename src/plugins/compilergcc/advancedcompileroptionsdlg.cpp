@@ -19,10 +19,10 @@
     #include <wx/spinctrl.h>
     #include <wx/textctrl.h>
     #include <wx/xrc/xmlres.h>
-    #include "compilerfactory.h"
     #include "globals.h"
 #endif
 #include "advancedcompileroptionsdlg.h"
+#include "compilerfactory.h"
 
 // TODO : implement full IsDirty mechanism, now always forced to true when OK is pressed
 // NOTE : when OK pressed settings are already applied to the compiler, although in the compiler settings
