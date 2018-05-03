@@ -12,15 +12,16 @@
 
 #ifndef CB_PRECOMP
     #include <wx/xrc/xmlres.h>
-    #include <wx/fontutil.h>
     #include <wx/choicdlg.h>
 
     #include <configmanager.h>
-    #include <editorcolourset.h>
     #include <editormanager.h>
     #include <logmanager.h>
 #endif
 
+#include <wx/fontutil.h>
+
+#include <editorcolourset.h>
 #include "cbcolourmanager.h"
 
 BEGIN_EVENT_TABLE(AbbreviationsConfigPanel, cbConfigurationPanel)

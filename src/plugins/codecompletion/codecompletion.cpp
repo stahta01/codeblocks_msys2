@@ -27,15 +27,12 @@
     #include <wx/toolbar.h>
     #include <wx/utils.h>
     #include <wx/xrc/xmlres.h>
-    #include <wx/wxscintilla.h>
 
     #include <cbeditor.h>
     #include <configmanager.h>
-    #include <editorcolourset.h>
     #include <editormanager.h>
     #include <globals.h>
     #include <logmanager.h>
-    #include <macrosmanager.h>
     #include <manager.h>
     #include <projectmanager.h>
     #include <sdk_events.h>
@@ -44,9 +41,13 @@
 #include <wx/tokenzr.h>
 #include <wx/html/htmlwin.h>
 
+#include <wx/wxscintilla.h>     // CB's Header
+
 #include <cbstyledtextctrl.h>
 #include <editor_hooks.h>
+#include <editorcolourset.h>
 #include <filegroupsandmasks.h>
+#include <macrosmanager.h>
 #include <multiselectdlg.h>
 
 #include "codecompletion.h"
