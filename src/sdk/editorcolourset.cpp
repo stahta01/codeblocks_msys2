@@ -17,7 +17,6 @@
     #include "cbeditor.h"
     #include "configmanager.h"
     #include "logmanager.h"
-    #include "filemanager.h"
     #include "manager.h"
 #endif
 
@@ -27,10 +26,10 @@
 
 #include "cbcolourmanager.h"
 #include "cbstyledtextctrl.h"
-
 #include "editorcolourset.h"
 #include "editorlexerloader.h"
 #include "filefilters.h"
+#include "filemanager.h"
 
 const int cbHIGHLIGHT_LINE = -98; // highlight line under caret virtual style
 const int cbSELECTION      = -99; // selection virtual style
