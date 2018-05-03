@@ -111,10 +111,3 @@ echo Stripping debug info from output31 tree
 strip output31\*.exe
 strip output31\*.dll
 strip %CB_OUTPUT_RESDIR%\plugins\*.dll
-
-REM Copy these files later as stripping symbols would corrupt them
-echo Copying crash handler files
-xcopy /y exchndl\win32\bin\*.dll devel31  > nul
-xcopy /y exchndl\win32\bin\*.yes devel31  > nul
-xcopy /y exchndl\win32\bin\*.dll output31 > nul
-xcopy /y exchndl\win32\bin\*.yes output31 > nul
