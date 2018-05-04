@@ -41,7 +41,7 @@
 #include "loggers.h"
 #include "macrosmanager.h"
 
-#ifndef __WXMSW__
+#ifndef __WINDOWS__
     #include <errno.h>
     // needed for the kill system call
     #include <signal.h>
@@ -739,7 +739,7 @@ void cbDebuggerPlugin::OnCompilerFinished(cb_unused CodeBlocksEvent& event)
     }
 }
 
-#ifndef __WXMSW__
+#ifndef __WINDOWS__
 namespace
 {
 wxString MakeSleepCommand()
