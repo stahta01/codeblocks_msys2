@@ -22,7 +22,7 @@
  *
  * -> NativeParserTest(): contains a ParserBase instance, which mimic the NativeParser in C::B.
  *   -> NativeParserTest()::ParseAndCodeCompletion(): parse the file, run tests contains in the file
- *      - Determine whether the file should be read from hard disk or wxScintilla control
+ *      - Determine whether the file should be read from hard disk or wxStyledTextCtrl control
  *      - parse it by calling ParserBase::ReParse() or ParserBase::ParseBuffer()
  *      - prepares an expression string
  *      - Tests the expression matching algorithms by call NativeParserTest::TestExpression()
@@ -72,7 +72,7 @@
  * To parse a local file, we need the ParserBase::Reparse() function, which simply create a
  * ParserThread instance, and run ParserThread::Parse().
  *
- * To parse a buffer(the buffer is the content of wxScintilla edit control), we need ParseBuffer()
+ * To parse a buffer(the buffer is the content of wxStyledTextCtrl edit control), we need ParseBuffer()
  * function from ParserBase class, which also run a ParserThread::Parse() there.
  *
  * To store the Tokens, we have a TokenTree member in ParserBase class.

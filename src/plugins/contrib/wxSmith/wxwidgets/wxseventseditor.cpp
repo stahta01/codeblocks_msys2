@@ -478,7 +478,7 @@ bool wxsEventsEditor::GotoHandler(int Index)
     int End = Ctrl->GetLength();
     while ( Begin < End )
     {
-        int Pos = Ctrl->FindText(Begin,End,FunctionName,wxSCI_FIND_MATCHCASE);
+        int Pos = Ctrl->FindText(Begin,End,FunctionName,wxSTC_FIND_MATCHCASE);
         if ( Pos < 0 ) break;
 
         // Checking if there's <ClassName> :: sequence before function

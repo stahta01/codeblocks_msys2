@@ -1041,7 +1041,7 @@ void CodeCompletion::DoCodeComplete(int caretPos, cbEditor* ed, std::vector<CCTo
                         stc->RegisterImage(iidx, wxBitmap(unknown_keyword_xpm));
                     // the first two keyword sets are the primary and secondary keywords (for most lexers at least)
                     // but this is now configurable in global settings
-                    for (int i = 0; i <= wxSCI_KEYWORDSET_MAX; ++i)
+                    for (int i = 0; i <= wxSTC_KEYWORDSET_MAX; ++i)
                     {
                         if (!m_LexerKeywordsToInclude[i])
                             continue;
@@ -1087,7 +1087,7 @@ void CodeCompletion::DoCodeComplete(int caretPos, cbEditor* ed, std::vector<CCTo
 void CodeCompletion::DoCodeCompletePreprocessor(int tknStart, int tknEnd, cbEditor* ed, std::vector<CCToken>& tokens)
 {
     cbStyledTextCtrl* stc = ed->GetControl();
-    if (stc->GetLexer() != wxSCI_LEX_CPP)
+    if (stc->GetLexer() != wxSTC_LEX_CPP)
     {
         const FileType fTp = FileTypeOf(ed->GetShortName());
         if (   fTp != ftSource
@@ -1258,7 +1258,7 @@ void CodeCompletion::DoCodeCompleteIncludes(cbEditor* ed, int& tknStart, int tkn
 std::vector<CodeCompletion::CCCallTip> CodeCompletion::GetCallTips(int pos, int style, cbEditor* ed, int& argsPos)
 {
     std::vector<CCCallTip> tips;
-    if (!IsAttached() || !m_InitDone || style == wxSCI_C_WXSMITH || !m_NativeParser.GetParser().Done())
+    if (!IsAttached() || !m_InitDone || style == wxSTC_C_WXSMITH || !m_NativeParser.GetParser().Done())
         return tips;
 
     int typedCommas = 0;
@@ -1273,8 +1273,8 @@ std::vector<CodeCompletion::CCCallTip> CodeCompletion::GetCallTips(int pos, int 
             && typedCommas <= m_NativeParser.CountCommas(items[i], 0) ) // commas satisfied
         {
             uniqueTips.insert(items[i]);
-            int hlStart = wxSCI_INVALID_POSITION;
-            int hlEnd   = wxSCI_INVALID_POSITION;
+            int hlStart = wxSTC_INVALID_POSITION;
+            int hlEnd   = wxSTC_INVALID_POSITION;
             m_NativeParser.GetCallTipHighlight(items[i], &hlStart, &hlEnd, typedCommas);
             tips.push_back(CCCallTip(items[i], hlStart, hlEnd));
         }
@@ -1617,7 +1617,7 @@ void CodeCompletion::GetAbsolutePath(const wxString& basePath, const wxArrayStri
     }
 }
 
-void CodeCompletion::EditorEventHook(cbEditor* editor, wxScintillaEvent& event)
+void CodeCompletion::EditorEventHook(cbEditor* editor, wxStyledTextEvent& event)
 {
     if (!IsAttached() || !m_InitDone)
     {
@@ -1633,22 +1633,22 @@ void CodeCompletion::EditorEventHook(cbEditor* editor, wxScintillaEvent& event)
 
     cbStyledTextCtrl* control = editor->GetControl();
 
-    if      (event.GetEventType() == wxEVT_SCI_CHARADDED)
-    {   TRACE(_T("wxEVT_SCI_CHARADDED")); }
-    else if (event.GetEventType() == wxEVT_SCI_CHANGE)
-    {   TRACE(_T("wxEVT_SCI_CHANGE")); }
-    else if (event.GetEventType() == wxEVT_SCI_MODIFIED)
-    {   TRACE(_T("wxEVT_SCI_MODIFIED")); }
-    else if (event.GetEventType() == wxEVT_SCI_AUTOCOMP_SELECTION)
-    {   TRACE(_T("wxEVT_SCI_AUTOCOMP_SELECTION")); }
-    else if (event.GetEventType() == wxEVT_SCI_AUTOCOMP_CANCELLED)
-    {   TRACE(_T("wxEVT_SCI_AUTOCOMP_CANCELLED")); }
+    if      (event.GetEventType() == wxEVT_STC_CHARADDED)
+    {   TRACE(_T("wxEVT_STC_CHARADDED")); }
+    else if (event.GetEventType() == wxEVT_STC_CHANGE)
+    {   TRACE(_T("wxEVT_STC_CHANGE")); }
+    else if (event.GetEventType() == wxEVT_STC_MODIFIED)
+    {   TRACE(_T("wxEVT_STC_MODIFIED")); }
+    else if (event.GetEventType() == wxEVT_STC_AUTOCOMP_SELECTION)
+    {   TRACE(_T("wxEVT_STC_AUTOCOMP_SELECTION")); }
+    else if (event.GetEventType() == wxEVT_STC_AUTOCOMP_CANCELLED)
+    {   TRACE(_T("wxEVT_STC_AUTOCOMP_CANCELLED")); }
 
     // if the user is modifying the editor, then CC should try to reparse the editor's content
     // and update the token tree.
     if (   m_NativeParser.GetParser().Options().whileTyping
-        && (   (event.GetModificationType() & wxSCI_MOD_INSERTTEXT)
-            || (event.GetModificationType() & wxSCI_MOD_DELETETEXT) ) )
+        && (   (event.GetModificationType() & wxSTC_MOD_INSERTTEXT)
+            || (event.GetModificationType() & wxSTC_MOD_DELETETEXT) ) )
     {
         m_NeedReparse = true;
     }
@@ -1664,9 +1664,9 @@ void CodeCompletion::EditorEventHook(cbEditor* editor, wxScintillaEvent& event)
             m_CurrentLength = control->GetLength();
             m_NeedReparse = false;
         }
-        // wxEVT_SCI_UPDATEUI will be sent on caret's motion, but we are only interested in the
+        // wxEVT_STC_UPDATEUI will be sent on caret's motion, but we are only interested in the
         // cases where line number is changed. Then we need to update the CC's toolbar.
-        if (event.GetEventType() == wxEVT_SCI_UPDATEUI)
+        if (event.GetEventType() == wxEVT_STC_UPDATEUI)
         {
             m_ToolbarNeedRefresh = true;
             TRACE(_T("CodeCompletion::EditorEventHook: Starting m_TimerToolbar."));
@@ -3325,7 +3325,7 @@ void CodeCompletion::UpdateEditorSyntax(cbEditor* ed)
         return;
     if (!ed)
         ed = Manager::Get()->GetEditorManager()->GetBuiltinActiveEditor();
-    if (!ed || ed->GetControl()->GetLexer() != wxSCI_LEX_CPP)
+    if (!ed || ed->GetControl()->GetLexer() != wxSTC_LEX_CPP)
         return;
 
     TokenIdxSet result;

@@ -56,7 +56,7 @@ EditorColourSet::EditorColourSet(const EditorColourSet& other) // copy ctor
 
         mset.m_Langs = it->second.m_Langs;
         mset.m_Lexers = it->second.m_Lexers;
-        for (int i = 0; i <= wxSCI_KEYWORDSET_MAX; ++i)
+        for (int i = 0; i <= wxSTC_KEYWORDSET_MAX; ++i)
         {
             mset.m_Keywords[i] = it->second.m_Keywords[i];
             mset.m_originalKeywords[i] = it->second.m_originalKeywords[i];
@@ -153,7 +153,7 @@ void EditorColourSet::LoadAvailableSets()
             continue;
 
         // keep the original filemasks and keywords, so we know what needs saving later
-        for (int i = 0; i <= wxSCI_KEYWORDSET_MAX; ++i)
+        for (int i = 0; i <= wxSTC_KEYWORDSET_MAX; ++i)
         {
             it->second.m_originalKeywords[i] = it->second.m_Keywords[i];
         }
@@ -180,8 +180,7 @@ void EditorColourSet::LoadAvailableSets()
 
 HighlightLanguage EditorColourSet::AddHighlightLanguage(int lexer, const wxString& name)
 {
-    if (   lexer <= wxSCI_LEX_NULL
-        || lexer >  wxSCI_LEX_LAST // this is a C::B extension to wxscintilla.h
+    if (   lexer <= wxSTC_LEX_NULL
         || name.IsEmpty() )
     {
         return HL_NONE;
@@ -222,7 +221,7 @@ HighlightLanguage EditorColourSet::GetHighlightLanguage(const wxString& name)
     return HL_NONE;
 }
 
-// from scintilla lexer (wxSCI_LEX_*)
+// from scintilla lexer (wxSTC_LEX_*)
 // Warning: the first one found is returned!
 HighlightLanguage EditorColourSet::GetHighlightLanguage(int lexer)
 {
@@ -532,15 +531,15 @@ void EditorColourSet::Apply(HighlightLanguage lang, cbStyledTextCtrl* control, b
         // not for empty background
         for (int i = 0; i <= countStyles; ++i)
         {
-            if (i < 33 || (i > 39 && i < wxSCI_STYLE_MAX))
+            if (i < 33 || (i > 39 && i < wxSTC_STYLE_MAX))
                 DoApplyStyle(control, i, defaults);
         }
     }
 
     // Calling StyleClearAll above clears the style for the line numbers, so we have to re-apply it.
     ColourManager *colours = Manager::Get()->GetColourManager();
-    control->StyleSetForeground(wxSCI_STYLE_LINENUMBER, colours->GetColour(wxT("editor_linenumbers_fg")));
-    control->StyleSetBackground(wxSCI_STYLE_LINENUMBER, colours->GetColour(wxT("editor_linenumbers_bg")));
+    control->StyleSetForeground(wxSTC_STYLE_LINENUMBER, colours->GetColour(wxT("editor_linenumbers_fg")));
+    control->StyleSetBackground(wxSTC_STYLE_LINENUMBER, colours->GetColour(wxT("editor_linenumbers_bg")));
 
     for (unsigned int i = 0; i < mset.m_Colours.GetCount(); ++i)
     {
@@ -581,7 +580,7 @@ void EditorColourSet::Apply(HighlightLanguage lang, cbStyledTextCtrl* control, b
 //            }
         }
     }
-    for (int i = 0; i <= wxSCI_KEYWORDSET_MAX; ++i)
+    for (int i = 0; i <= wxSTC_KEYWORDSET_MAX; ++i)
     {
         if (!isC || i != 1) // exclude stl highlights for C
             control->SetKeyWords(i, mset.m_Keywords[i]);
@@ -663,7 +662,7 @@ void EditorColourSet::Save()
             }
         }
         wxString tmpkey;
-        for (int i = 0; i <= wxSCI_KEYWORDSET_MAX; ++i)
+        for (int i = 0; i <= wxSTC_KEYWORDSET_MAX; ++i)
         {
             if (it->second.m_Keywords[i] != it->second.m_originalKeywords[i])
             {
@@ -770,7 +769,7 @@ void EditorColourSet::Load()
             }
         }
         wxString tmpkey;
-        for (int i = 0; i <= wxSCI_KEYWORDSET_MAX; ++i)
+        for (int i = 0; i <= wxSTC_KEYWORDSET_MAX; ++i)
         {
             tmpkey.Printf(_T("%s/editor/keywords/set%d"), key.c_str(), i);
             if (cfg->Exists(tmpkey))
@@ -800,14 +799,14 @@ void EditorColourSet::Reset(HighlightLanguage lang)
 
 wxString& EditorColourSet::GetKeywords(HighlightLanguage lang, int idx)
 {
-    if (idx < 0 || idx > wxSCI_KEYWORDSET_MAX)
+    if (idx < 0 || idx > wxSTC_KEYWORDSET_MAX)
         idx = 0;
     return m_Sets[lang].m_Keywords[idx];
 }
 
 void EditorColourSet::SetKeywords(HighlightLanguage lang, int idx, const wxString& keywords)
 {
-    if (lang != HL_NONE && idx >=0 && idx <= wxSCI_KEYWORDSET_MAX)
+    if (lang != HL_NONE && idx >=0 && idx <= wxSTC_KEYWORDSET_MAX)
     {
         wxString tmp(_T(' '), keywords.length()); // faster than using Alloc()
 

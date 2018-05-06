@@ -134,7 +134,7 @@ CCTestFrame::CCTestFrame(const wxString& main_file) :
     m_ParserCtrl = new wxNotebook(this, wxID_ANY, wxDefaultPosition, wxDefaultSize, 0, _T("wxID_ANY"));
     panParserInput = new wxPanel(m_ParserCtrl, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxTAB_TRAVERSAL, _T("wxID_ANY"));
     bszParserInput = new wxBoxSizer(wxVERTICAL);
-    m_Control = new wxScintilla(panParserInput,wxID_ANY,wxDefaultPosition,wxDefaultSize);
+    m_Control = new wxStyledTextCtrl(panParserInput,wxID_ANY,wxDefaultPosition,wxDefaultSize);
     bszParserInput->Add(m_Control, 1, wxEXPAND, 5);
     panParserInput->SetSizer(bszParserInput);
     bszParserInput->Fit(panParserInput);
@@ -372,55 +372,55 @@ void CCTestFrame::InitControl()
 {
     m_Control->StyleClearAll();
 
-    m_Control->SetLexer(wxSCI_LEX_CPP);
+    m_Control->SetLexer(wxSTC_LEX_CPP);
 
-    m_Control->StyleSetForeground(wxSCI_C_DEFAULT,        wxColour(0, 0, 0));
-    m_Control->StyleSetFontAttr  (wxSCI_C_DEFAULT,        10, wxT("Courier New"), false, false, false);
+    m_Control->StyleSetForeground(wxSTC_C_DEFAULT,        wxColour(0, 0, 0));
+    m_Control->StyleSetFontAttr  (wxSTC_C_DEFAULT,        10, wxT("Courier New"), false, false, false);
 
-    m_Control->StyleSetForeground(wxSCI_C_COMMENT,        wxColour(160, 160, 160));
-    m_Control->StyleSetFontAttr  (wxSCI_C_COMMENT,        10, wxT("Courier New"), false, false, false);
+    m_Control->StyleSetForeground(wxSTC_C_COMMENT,        wxColour(160, 160, 160));
+    m_Control->StyleSetFontAttr  (wxSTC_C_COMMENT,        10, wxT("Courier New"), false, false, false);
 
-    m_Control->StyleSetForeground(wxSCI_C_COMMENTLINE,    wxColour(190, 190, 230));
-    m_Control->StyleSetFontAttr  (wxSCI_C_COMMENTLINE,    10, wxT("Courier New"), false, false, false);
+    m_Control->StyleSetForeground(wxSTC_C_COMMENTLINE,    wxColour(190, 190, 230));
+    m_Control->StyleSetFontAttr  (wxSTC_C_COMMENTLINE,    10, wxT("Courier New"), false, false, false);
 
-    m_Control->StyleSetForeground(wxSCI_C_COMMENTDOC,     wxColour(128, 128, 255));
-    m_Control->StyleSetFontAttr  (wxSCI_C_COMMENTDOC,     10, wxT("Courier New"), false, false, false);
+    m_Control->StyleSetForeground(wxSTC_C_COMMENTDOC,     wxColour(128, 128, 255));
+    m_Control->StyleSetFontAttr  (wxSTC_C_COMMENTDOC,     10, wxT("Courier New"), false, false, false);
 
-    m_Control->StyleSetForeground(wxSCI_C_NUMBER,         wxColour(240, 0, 240));
-    m_Control->StyleSetFontAttr  (wxSCI_C_NUMBER,         10, wxT("Courier New"), false, false, false);
+    m_Control->StyleSetForeground(wxSTC_C_NUMBER,         wxColour(240, 0, 240));
+    m_Control->StyleSetFontAttr  (wxSTC_C_NUMBER,         10, wxT("Courier New"), false, false, false);
 
-    m_Control->StyleSetForeground(wxSCI_C_WORD,           wxColour(0, 0, 160));
-    m_Control->StyleSetFontAttr  (wxSCI_C_WORD,           10, wxT("Courier New"), false, false, false);
+    m_Control->StyleSetForeground(wxSTC_C_WORD,           wxColour(0, 0, 160));
+    m_Control->StyleSetFontAttr  (wxSTC_C_WORD,           10, wxT("Courier New"), false, false, false);
 
-    m_Control->StyleSetForeground(wxSCI_C_STRING,         wxColour(0, 0, 255));
-    m_Control->StyleSetFontAttr  (wxSCI_C_STRING,         10, wxT("Courier New"), false, false, false);
+    m_Control->StyleSetForeground(wxSTC_C_STRING,         wxColour(0, 0, 255));
+    m_Control->StyleSetFontAttr  (wxSTC_C_STRING,         10, wxT("Courier New"), false, false, false);
 
-    m_Control->StyleSetForeground(wxSCI_C_CHARACTER,      wxColour(224, 160, 0));
-    m_Control->StyleSetFontAttr  (wxSCI_C_CHARACTER,      10, wxT("Courier New"), false, false, false);
+    m_Control->StyleSetForeground(wxSTC_C_CHARACTER,      wxColour(224, 160, 0));
+    m_Control->StyleSetFontAttr  (wxSTC_C_CHARACTER,      10, wxT("Courier New"), false, false, false);
 
-    m_Control->StyleSetForeground(wxSCI_C_UUID,           wxColour(0, 0, 0));
-    m_Control->StyleSetFontAttr  (wxSCI_C_UUID,           10, wxT("Courier New"), false, false, false);
+    m_Control->StyleSetForeground(wxSTC_C_UUID,           wxColour(0, 0, 0));
+    m_Control->StyleSetFontAttr  (wxSTC_C_UUID,           10, wxT("Courier New"), false, false, false);
 
-    m_Control->StyleSetForeground(wxSCI_C_PREPROCESSOR,   wxColour(0, 128, 0));
-    m_Control->StyleSetFontAttr  (wxSCI_C_PREPROCESSOR,   10, wxT("Courier New"), false, false, false);
+    m_Control->StyleSetForeground(wxSTC_C_PREPROCESSOR,   wxColour(0, 128, 0));
+    m_Control->StyleSetFontAttr  (wxSTC_C_PREPROCESSOR,   10, wxT("Courier New"), false, false, false);
 
-    m_Control->StyleSetForeground(wxSCI_C_OPERATOR,       wxColour(255, 0, 0));
-    m_Control->StyleSetFontAttr  (wxSCI_C_OPERATOR,       10, wxT("Courier New"), false, false, false);
+    m_Control->StyleSetForeground(wxSTC_C_OPERATOR,       wxColour(255, 0, 0));
+    m_Control->StyleSetFontAttr  (wxSTC_C_OPERATOR,       10, wxT("Courier New"), false, false, false);
 
-    m_Control->StyleSetForeground(wxSCI_C_IDENTIFIER,     wxColour(0, 0, 0));
-    m_Control->StyleSetFontAttr  (wxSCI_C_IDENTIFIER,     10, wxT("Courier New"), false, false, false);
+    m_Control->StyleSetForeground(wxSTC_C_IDENTIFIER,     wxColour(0, 0, 0));
+    m_Control->StyleSetFontAttr  (wxSTC_C_IDENTIFIER,     10, wxT("Courier New"), false, false, false);
 
-    m_Control->StyleSetForeground(wxSCI_C_STRINGEOL,      wxColour(0, 0, 255));
-    m_Control->StyleSetFontAttr  (wxSCI_C_STRINGEOL,      10, wxT("Courier New"), false, false, false);
+    m_Control->StyleSetForeground(wxSTC_C_STRINGEOL,      wxColour(0, 0, 255));
+    m_Control->StyleSetFontAttr  (wxSTC_C_STRINGEOL,      10, wxT("Courier New"), false, false, false);
 
-    m_Control->StyleSetForeground(wxSCI_C_COMMENTLINEDOC, wxColour(128, 128, 255));
-    m_Control->StyleSetFontAttr  (wxSCI_C_COMMENTLINEDOC, 10, wxT("Courier New"), false, false, false);
+    m_Control->StyleSetForeground(wxSTC_C_COMMENTLINEDOC, wxColour(128, 128, 255));
+    m_Control->StyleSetFontAttr  (wxSTC_C_COMMENTLINEDOC, 10, wxT("Courier New"), false, false, false);
 
-    m_Control->StyleSetForeground(wxSCI_C_WORD2,          wxColour(0, 160, 0));
-    m_Control->StyleSetFontAttr  (wxSCI_C_WORD2,          10, wxT("Courier New"), false, false, false);
+    m_Control->StyleSetForeground(wxSTC_C_WORD2,          wxColour(0, 160, 0));
+    m_Control->StyleSetFontAttr  (wxSTC_C_WORD2,          10, wxT("Courier New"), false, false, false);
 
-    m_Control->StyleSetForeground(wxSCI_C_PREPROCESSORCOMMENT, wxColour(160, 160, 160));
-    m_Control->StyleSetFontAttr  (wxSCI_C_PREPROCESSORCOMMENT, 10, wxT("Courier New"), false, false, false);
+    m_Control->StyleSetForeground(wxSTC_C_PREPROCESSORCOMMENT, wxColour(160, 160, 160));
+    m_Control->StyleSetFontAttr  (wxSTC_C_PREPROCESSORCOMMENT, 10, wxT("Courier New"), false, false, false);
 
     const wxString kw(wxT(
     "_Char16_t _Char32_t align_union alignof asm auto bool break case catch char class const "
@@ -451,28 +451,28 @@ void CCTestFrame::InitControl()
     m_Control->SetProperty(wxT("fold.preprocessor"), wxT("1"));
 
     m_Control->SetFoldFlags(16);
-    m_Control->SetMarginType(C_FOLDING_MARGIN, wxSCI_MARGIN_SYMBOL);
+    m_Control->SetMarginType(C_FOLDING_MARGIN, wxSTC_MARGIN_SYMBOL);
     m_Control->SetMarginWidth(C_FOLDING_MARGIN, 16);
     // use "|" here or we might break plugins that use the margin (none at the moment)
     m_Control->SetMarginMask(C_FOLDING_MARGIN,
                              m_Control->GetMarginMask(C_FOLDING_MARGIN)
-                             | (  wxSCI_MASK_FOLDERS
-                                - (  (1 << wxSCI_MARKNUM_CHANGEUNSAVED)
-                                   | (1 << wxSCI_MARKNUM_CHANGESAVED))) );
+                             | (  wxSTC_MASK_FOLDERS
+                                - (  (1 << wxSTC_MARKNUM_CHANGEUNSAVED)
+                                   | (1 << wxSTC_MARKNUM_CHANGESAVED))) );
     m_Control->SetMarginSensitive(C_FOLDING_MARGIN, 1);
 
     wxColor f(0xff, 0xff, 0xff); // foreground colour
     wxColor b(0x80, 0x80, 0x80); // background colour
-    SetMarkerStyle(wxSCI_MARKNUM_FOLDEROPEN,    wxSCI_MARK_MINUS,      f, b);
-    SetMarkerStyle(wxSCI_MARKNUM_FOLDER,        wxSCI_MARK_PLUS,       f, b);
-    SetMarkerStyle(wxSCI_MARKNUM_FOLDERSUB,     wxSCI_MARK_BACKGROUND, f, b);
-    SetMarkerStyle(wxSCI_MARKNUM_FOLDERTAIL,    wxSCI_MARK_BACKGROUND, f, b);
-    SetMarkerStyle(wxSCI_MARKNUM_FOLDEREND,     wxSCI_MARK_PLUS,       f, b);
-    SetMarkerStyle(wxSCI_MARKNUM_FOLDEROPENMID, wxSCI_MARK_MINUS,      f, b);
-    SetMarkerStyle(wxSCI_MARKNUM_FOLDERMIDTAIL, wxSCI_MARK_BACKGROUND, f, b);
+    SetMarkerStyle(wxSTC_MARKNUM_FOLDEROPEN,    wxSTC_MARK_MINUS,      f, b);
+    SetMarkerStyle(wxSTC_MARKNUM_FOLDER,        wxSTC_MARK_PLUS,       f, b);
+    SetMarkerStyle(wxSTC_MARKNUM_FOLDERSUB,     wxSTC_MARK_BACKGROUND, f, b);
+    SetMarkerStyle(wxSTC_MARKNUM_FOLDERTAIL,    wxSTC_MARK_BACKGROUND, f, b);
+    SetMarkerStyle(wxSTC_MARKNUM_FOLDEREND,     wxSTC_MARK_PLUS,       f, b);
+    SetMarkerStyle(wxSTC_MARKNUM_FOLDEROPENMID, wxSTC_MARK_MINUS,      f, b);
+    SetMarkerStyle(wxSTC_MARKNUM_FOLDERMIDTAIL, wxSTC_MARK_BACKGROUND, f, b);
 
-    Connect(m_Control->GetId(), -1, wxEVT_SCI_MARGINCLICK,
-            (wxObjectEventFunction) (wxEventFunction) (wxScintillaEventFunction)
+    Connect(m_Control->GetId(), -1, wxEVT_STC_MARGINCLICK,
+            (wxObjectEventFunction) (wxEventFunction) (wxStyledTextEventFunction)
             &CCTestFrame::OnMarginClick);
 }
 
@@ -507,7 +507,7 @@ void CCTestFrame::OnMenuSaveSelected(wxCommandEvent& /*event*/)
     }
 }
 
-// load the select source file to wxScintilla control
+// load the select source file to wxStyledTextCtrl control
 void CCTestFrame::OnMenuOpenSelected(wxCommandEvent& /*event*/)
 {
     if (m_OpenFile->ShowModal() == wxID_OK)
@@ -579,7 +579,7 @@ void CCTestFrame::OnParse(wxCommandEvent& WXUNUSED(event))
     Start();
 }
 
-void CCTestFrame::OnMarginClick(wxScintillaEvent& event)
+void CCTestFrame::OnMarginClick(wxStyledTextEvent& event)
 {
     if (event.GetMargin()==C_FOLDING_MARGIN)
     {

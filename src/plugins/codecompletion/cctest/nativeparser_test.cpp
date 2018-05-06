@@ -200,7 +200,7 @@ bool NativeParserTest::ParseAndCodeCompletion(wxString filename, bool isLocalFil
     testResult << message << wxT("\n");
 
     // reading the test cases, first we read all the lines of the file
-    // handling local files and wxScintilla control differently
+    // handling local files and wxStyledTextCtrl control differently
     std::vector<wxString> allLines;
     if (isLocalFile)
     {

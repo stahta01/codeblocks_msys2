@@ -890,7 +890,7 @@ int NativeParser::GetCallTips(wxArrayString& items, int& typedCommas, cbEditor* 
     if (!ed || !m_Parser->Done())
     {
         items.Add(wxT("Parsing at the moment..."));
-        return wxSCI_INVALID_POSITION;
+        return wxSTC_INVALID_POSITION;
     }
 
     TRACE(_T("NativeParser::GetCallTips()"));
@@ -911,7 +911,7 @@ int NativeParser::GetCallTips(wxArrayString& items, int& typedCommas, cbEditor* 
 
         const wxChar ch = searchData.control->GetCharAt(pos);
         if (ch == _T(';'))
-            return wxSCI_INVALID_POSITION;
+            return wxSTC_INVALID_POSITION;
         else if (ch == _T(','))
         {
             if (nest == 0)
@@ -943,7 +943,7 @@ int NativeParser::GetCallTips(wxArrayString& items, int& typedCommas, cbEditor* 
     const wxString target = searchData.control->GetTextRange(start, end);
     TRACE(_T("Sending \"%s\" for call-tip"), target.wx_str());
     if (target.IsEmpty())
-        return wxSCI_INVALID_POSITION;
+        return wxSTC_INVALID_POSITION;
 
     TokenIdxSet result;
     MarkItemsByAI(result, true, false, true, end);

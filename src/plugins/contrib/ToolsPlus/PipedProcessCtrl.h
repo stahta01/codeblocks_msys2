@@ -3,8 +3,7 @@
 
 #include <wx/process.h>
 #include <wx/aui/aui.h>
-
-#include <wx/wxscintilla.h>
+#include <wx/stc/stc.h>  // styled text control
 
 #include "ShellCtrlBase.h"
 
@@ -15,7 +14,7 @@ namespace
 ShellCtrlRegistrant<PipedProcessCtrl> reg(_T("Piped Process Control"));
 }
 
-class PipedTextCtrl: public wxScintilla
+class PipedTextCtrl: public wxStyledTextCtrl
 {
 public:
     PipedTextCtrl(wxWindow *parent, PipedProcessCtrl *pp);

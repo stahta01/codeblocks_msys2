@@ -26,7 +26,7 @@
 #include <set>
 
 class cbEditor;
-class wxScintillaEvent;
+class wxStyledTextEvent;
 class wxChoice;
 class DocumentationHelper;
 
@@ -137,7 +137,7 @@ public:
     void GetAbsolutePath(const wxString& basePath, const wxArrayString& targets, wxArrayString& dirs);
 
     /** handle all the editor event */
-    void EditorEventHook(cbEditor* editor, wxScintillaEvent& event);
+    void EditorEventHook(cbEditor* editor, wxStyledTextEvent& event);
 
     /** read CC's options, mostly happens the user change some setting and press APPLY */
     void RereadOptions(); // called by the configuration panel
@@ -267,7 +267,7 @@ private:
      * @param useTabs whether TAB is used
      * @param tabSize how long is the TAB
      */
-    void MatchCodeStyle(wxString& str, int eolStyle = wxSCI_EOL_LF, const wxString& indent = wxEmptyString, bool useTabs = false, int tabSize = 4);
+    void MatchCodeStyle(wxString& str, int eolStyle = wxSTC_EOL_LF, const wxString& indent = wxEmptyString, bool useTabs = false, int tabSize = 4);
 
     // CC's toolbar related functions
     /** helper method in finding the function position in the vector for the function containing the current line */

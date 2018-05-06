@@ -438,8 +438,8 @@ void CodeRefactoring::Find(cbStyledTextCtrl* control, const wxString& file, cons
     for (;;)
     {
         int endPos;
-        int pos = control->FindText(start, end, target, wxSCI_FIND_WHOLEWORD | wxSCI_FIND_MATCHCASE, &endPos);
-        if (pos != wxSCI_INVALID_POSITION)
+        int pos = control->FindText(start, end, target, wxSTC_FIND_WHOLEWORD | wxSTC_FIND_MATCHCASE, &endPos);
+        if (pos != wxSTC_INVALID_POSITION)
         {
             start = endPos;
             const int line = control->LineFromPosition(pos);

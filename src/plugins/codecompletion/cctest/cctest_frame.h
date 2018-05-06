@@ -50,9 +50,9 @@ protected:
     //*)
 
 private:
-    // initialize the wxScintilla control
+    // initialize the wxStyledTextCtrl control
     void InitControl();
-    // load the source file content to wxScintilla control
+    // load the source file content to wxStyledTextCtrl control
     void LoadToControl();
     void SetMarkerStyle(int marker, int markerType, wxColor fore, wxColor back);
 
@@ -69,14 +69,14 @@ private:
     void OnTestSingle(wxCommandEvent& event);
     //*)
 
-    void OnMarginClick(wxScintillaEvent& event);
+    void OnMarginClick(wxStyledTextEvent& event);
     void OnFindDialog(wxFindDialogEvent& event);
     void OnCCLogger(wxCommandEvent& event);
     void OnCCAddToken(wxCommandEvent& event);
 
 
     //(*Declarations(CCTestFrame)
-    wxScintilla* m_Control;
+    wxStyledTextCtrl* m_Control;
     wxTextCtrl* m_TreeCtrl;
     wxCheckBox* m_DoTreeCtrl;
     wxPanel* panCompletionTest;

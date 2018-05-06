@@ -136,7 +136,7 @@ wxString wxsCoder::GetCode(const wxString& FileName,const wxString& Header,const
     if ( Editor )
     {
         cbStyledTextCtrl* Ctrl = Editor->GetControl();
-        Ctrl->SetSearchFlags(wxSCI_FIND_MATCHCASE);
+        Ctrl->SetSearchFlags(wxSTC_FIND_MATCHCASE);
         Ctrl->SetTargetStart(0);
         Ctrl->SetTargetEnd(Ctrl->GetLength());
         int Position = Ctrl->SearchInTarget(Header);
@@ -353,7 +353,7 @@ bool wxsCoder::ApplyChangesEditor(cbEditor* Editor,const wxString& Header,const 
     }
 
     // Searching for beginning of section to replace
-    Ctrl->SetSearchFlags(wxSCI_FIND_MATCHCASE);
+    Ctrl->SetSearchFlags(wxSTC_FIND_MATCHCASE);
     Ctrl->SetTargetStart(0);
     Ctrl->SetTargetEnd(FullLength);
     int Position = Ctrl->SearchInTarget(Header);
