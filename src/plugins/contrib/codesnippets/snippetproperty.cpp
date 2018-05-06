@@ -43,8 +43,8 @@
 ////-#include "defsext.h"
 ////-#include "dragscrollevent.h"
 #include "version.h"
-//#include "wxscintilla/include/wx/wxscintilla.h"   //svn5785
-#include <wx/wxscintilla.h>                         //svn5785
+
+#include <wx/stc/stc.h>  // styled text control
 
    BEGIN_EVENT_TABLE(SnippetProperty, SnippetPropertyForm)
     EVT_BUTTON(wxID_OK,             SnippetProperty::OnOk)
@@ -124,7 +124,7 @@ void SnippetProperty::InitSnippetProperty(wxTreeCtrl* pTree, wxTreeItemId itemId
 
 	wxColour txtBackground = m_ItemLabelTextCtrl->GetBackgroundColour();
     //m_SnippetEditCtrl->SetBackgroundColour(txtBackground);
-    m_SnippetEditCtrl->StyleSetBackground (wxSCI_STYLE_DEFAULT, txtBackground);
+    m_SnippetEditCtrl->StyleSetBackground (wxSTC_STYLE_DEFAULT, txtBackground);
     m_SnippetEditCtrl->StyleClearAll();
 
 	// Get the item
