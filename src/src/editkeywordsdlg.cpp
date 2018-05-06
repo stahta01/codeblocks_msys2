@@ -16,7 +16,6 @@
     #include <wx/spinctrl.h>
     #include <wx/stattext.h>
     #include <wx/textctrl.h>
-    #include <wx/wxscintilla.h>
 #endif
 
 #include "editorcolourset.h"
