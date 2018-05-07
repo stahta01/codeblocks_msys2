@@ -87,7 +87,6 @@
 		<Unit filename="HexEditViewBase.h" />
 		<Unit filename="HexEditor.cpp" />
 		<Unit filename="HexEditor.h" />
-		<Unit filename="Makefile.am" />
 		<Unit filename="SearchDialog.cpp" />
 		<Unit filename="SearchDialog.h" />
 		<Unit filename="SelectStoredExpressionDlg.cpp" />

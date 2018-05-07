@@ -75,7 +75,6 @@
 			<Add after="update31.bat" />
 			<Mode after="always" />
 		</ExtraCommands>
-		<Unit filename="Makefile.am" />
 		<Unit filename="codesnippets.cpp" />
 		<Unit filename="codesnippets.h" />
 		<Unit filename="codesnippetstreectrl.cpp" />
@@ -88,7 +87,6 @@
 		</Unit>
 		<Unit filename="manifest.xml" />
 		<Unit filename="menuidentifiers.h" />
-		<Unit filename="resources/Makefile.am" />
 		<Unit filename="resources/allsnippets.png" />
 		<Unit filename="resources/category.png" />
 		<Unit filename="resources/findf.png" />
