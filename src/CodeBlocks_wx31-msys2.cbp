@@ -420,50 +420,6 @@
 					<Mode after="always" />
 				</ExtraCommands>
 			</Target>
-			<Target title="Code-completion">
-				<Option output="devel31/share/CodeBlocks/plugins/codecompletion" prefix_auto="1" extension_auto="1" />
-				<Option working_dir="devel31" />
-				<Option object_output=".objs31" />
-				<Option external_deps="devel31/libcodeblocks.a;" />
-				<Option type="3" />
-				<Option compiler="gcc" />
-				<Option parameters="--debug-log --no-dde --no-check-associations --multiple-instance --no-splash-screen --verbose -p debug" />
-				<Option host_application="./codeblocks.exe" />
-				<Option run_host_application_in_terminal="0" />
-				<Option projectLinkerOptionsRelation="1" />
-				<Compiler>
-					<Add option="-DBUILDING_PLUGIN" />
-					<Add option="-DCC_NO_COLLAPSE_ITEM" />
-					<Add option="-DCB_PRECOMP" />
-					<Add directory="include" />
-					<Add directory="include/mozilla_chardet" />
-					<Add directory="include/mozilla_chardet/mfbt" />
-					<Add directory="include/mozilla_chardet/nsprpub/pr/include" />
-					<Add directory="include/mozilla_chardet/xpcom" />
-					<Add directory="include/mozilla_chardet/xpcom/base" />
-					<Add directory="include/mozilla_chardet/xpcom/glue" />
-					<Add directory="$(TARGET_COMPILER_DIR)lib/wx/include/$(WX_TOOLKIT)-unicode-$(WX_VERSION)" />
-					<Add directory="$(TARGET_COMPILER_DIR)include/wx-$(WX_VERSION)" />
-				</Compiler>
-				<Linker>
-					<Add option="-Wl,--enable-auto-image-base" />
-					<Add option="-Wl,--add-stdcall-alias" />
-					<Add option="-Wl,--enable-auto-import" />
-					<Add option="-Wl,--no-undefined" />
-					<Add option="-mthreads" />
-					<Add library="codeblocks" />
-					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_aui-$(WX_VERSION).dll" />
-					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_xrc-$(WX_VERSION).dll" />
-					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_core-$(WX_VERSION).dll" />
-					<Add library="wx_base$(WX_SUFFIX)-$(WX_VERSION).dll" />
-					<Add directory="devel31" />
-				</Linker>
-				<ExtraCommands>
-					<Add after="cmd /c if not exist devel31\share\CodeBlocks mkdir devel31\share\CodeBlocks" />
-					<Add after="zip -jq9 devel31\share\CodeBlocks\codecompletion.zip plugins\codecompletion\resources\manifest.xml plugins\codecompletion\resources\*.xrc" />
-					<Mode after="always" />
-				</ExtraCommands>
-			</Target>
 			<Target title="Class wizard">
 				<Option output="devel31/share/CodeBlocks/plugins/classwizard" prefix_auto="1" extension_auto="1" />
 				<Option working_dir="devel31" />
@@ -780,8 +736,8 @@
 		</Build>
 		<VirtualTargets>
 			<Add alias="All" targets="tinyXML;AutoRevision;ConsoleRunner;Squirrel;Squirrel std lib;SqPlus;sdk;src;Abbreviations;AStyle;Autosave;Compiler depslib;Compiler;Debugger;Class wizard;Default MIME handler;Occurrences Highlighting;Open files list;Projects-workspaces importer;Scripted wizard;To-do;XP look &amp; feel;" />
-			<Add alias="Core app &amp; plugins" targets="sdk;src;Abbreviations;AStyle;Autosave;Compiler depslib;Compiler;Debugger;Code-completion;Class wizard;Default MIME handler;Occurrences Highlighting;Open files list;Projects-workspaces importer;Scripted wizard;To-do;XP look &amp; feel;" />
-			<Add alias="Plugins only" targets="Abbreviations;AStyle;Autosave;Compiler;Debugger;Code-completion;Class wizard;Default MIME handler;Occurrences Highlighting;Open files list;Projects-workspaces importer;Scripted wizard;To-do;XP look &amp; feel;" />
+			<Add alias="Core app &amp; plugins" targets="sdk;src;Abbreviations;AStyle;Autosave;Compiler depslib;Compiler;Debugger;Class wizard;Default MIME handler;Occurrences Highlighting;Open files list;Projects-workspaces importer;Scripted wizard;To-do;XP look &amp; feel;" />
+			<Add alias="Plugins only" targets="Abbreviations;AStyle;Autosave;Compiler;Debugger;Class wizard;Default MIME handler;Occurrences Highlighting;Open files list;Projects-workspaces importer;Scripted wizard;To-do;XP look &amp; feel;" />
 			<Add alias="Third-party libs" targets="tinyXML;AutoRevision;ConsoleRunner;Squirrel;Squirrel std lib;SqPlus;Compiler depslib;" />
 		</VirtualTargets>
 		<Compiler>
@@ -3229,9 +3185,6 @@
 		<Unit filename="wxsmith/BuildTargetPanel.wxs">
 			<Option target="src" />
 		</Unit>
-		<Unit filename="wxsmith/CCDebugInfo.wxs">
-			<Option target="src" />
-		</Unit>
 		<Unit filename="wxsmith/CompilerPanel.wxs">
 			<Option target="src" />
 		</Unit>
@@ -3282,7 +3235,6 @@
 				<resources>
 					<wxScrollingDialog wxs="wxsmith/VirtualBuildTargetsDlg.wxs" src="src/virtualbuildtargetsdlg.cpp" hdr="src/virtualbuildtargetsdlg.h" xrc="src/resources/virtualbuildtargetsdlg.xrc" fwddecl="0" i18n="1" name="VirtualBuildTargetsDlg" language="CPP" />
 					<wxScrollingDialog wxs="wxsmith/databreakpointdlg.wxs" src="plugins/debuggergdb/databreakpointdlg.cpp" hdr="plugins/debuggergdb/databreakpointdlg.h" fwddecl="0" i18n="1" name="DataBreakpointDlg" language="CPP" />
-					<wxScrollingDialog wxs="wxsmith/CCDebugInfo.wxs" src="plugins/codecompletion/parser/ccdebuginfo.cpp" hdr="plugins/codecompletion/parser/ccdebuginfo.h" fwddecl="0" i18n="1" name="CCDebugInfo" language="CPP" />
 					<wxPanel wxs="wxsmith/ScriptConsole.wxs" src="src/scriptconsole.cpp" hdr="src/scriptconsole.h" fwddecl="0" i18n="1" name="ScriptConsole" language="CPP" />
 					<wxPanel wxs="wxsmith/BuildTargetPanel.wxs" src="plugins/scriptedwizard/buildtargetpanel.cpp" hdr="plugins/scriptedwizard/buildtargetpanel.h" fwddecl="0" i18n="1" name="BuildTargetPanel" language="CPP" />
 					<wxPanel wxs="wxsmith/CompilerPanel.wxs" src="plugins/scriptedwizard/compilerpanel.cpp" hdr="plugins/scriptedwizard/compilerpanel.h" fwddecl="0" i18n="1" name="CompilerPanel" language="CPP" />
@@ -3296,7 +3248,6 @@
 					<wxPanel wxs="wxsmith/debuggersettingspanel.wxs" src="src/debuggersettingspanel.cpp" hdr="src/debuggersettingspanel.h" fwddecl="0" i18n="1" name="DebuggerSettingsPanel" language="CPP" />
 					<wxPanel wxs="wxsmith/debuggersettingscommonpanel.wxs" src="src/debuggersettingscommonpanel.cpp" hdr="src/debuggersettingscommonpanel.h" fwddecl="0" i18n="1" name="DebuggerSettingsCommonPanel" language="CPP" />
 					<wxDialog wxs="wxsmith/goto_file.wxs" src="src/goto_file.cpp" hdr="src/goto_file.h" fwddecl="1" i18n="1" name="GotoFile" language="CPP" />
-					<wxDialog wxs="plugins/codecompletion/wxsmith/goto_function.wxs" src="plugins/codecompletion/gotofunctiondlg.cpp" hdr="plugins/codecompletion/gotofunctiondlg.h" fwddecl="1" i18n="1" name="GotoFunctionDlg" language="CPP" />
 				</resources>
 			</wxsmith>
 			<debugger />
